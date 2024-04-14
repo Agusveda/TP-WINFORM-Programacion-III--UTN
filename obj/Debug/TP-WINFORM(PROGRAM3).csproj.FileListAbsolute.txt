@@ -8,3 +8,13 @@ C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\bin\D
 C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\bin\Debug\TP-WINFORM(PROGRAM3).pdb
 C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\obj\Debug\TP-WINFORM(PROGRAM3).exe
 C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\obj\Debug\TP-WINFORM(PROGRAM3).pdb
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\bin\Debug\TP-WINFORM(PROGRAM3).exe.config
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\bin\Debug\TP-WINFORM(PROGRAM3).exe
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\bin\Debug\TP-WINFORM(PROGRAM3).pdb
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\obj\Debug\TP-WINFORM(PROGRAM3).csproj.AssemblyReference.cache
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\obj\Debug\TP_WINFORM_PROGRAM3_.Form1.resources
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\obj\Debug\TP_WINFORM_PROGRAM3_.Properties.Resources.resources
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\obj\Debug\TP-WINFORM(PROGRAM3).csproj.GenerateResource.cache
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\obj\Debug\TP-WINFORM(PROGRAM3).csproj.CoreCompileInputs.cache
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\obj\Debug\TP-WINFORM(PROGRAM3).exe
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\obj\Debug\TP-WINFORM(PROGRAM3).pdb
