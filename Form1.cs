@@ -24,7 +24,7 @@ namespace TP_WINFORM_PROGRAM3_
 
         private void HOLA_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("HOLA MUNDITO");
+            MessageBox.Show("HOLA MUNDITO"); // hola
         }
     }
 }
