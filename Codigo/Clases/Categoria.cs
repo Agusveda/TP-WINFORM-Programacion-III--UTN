@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-    internal class Categoria
+     class Categoria
     {
         public int Id;
         public string Descripcion;
