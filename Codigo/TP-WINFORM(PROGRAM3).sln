@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP-WINFORM(PROGRAM3)", "TP-WINFORM(PROGRAM3).csproj", "{E1459B06-8C39-439A-917F-110AAD7D2FA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clases", "Clases\Clases.csproj", "{9FE91FEF-E570-4CBD-8D5F-A68DCE3B6B5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E1459B06-8C39-439A-917F-110AAD7D2FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1459B06-8C39-439A-917F-110AAD7D2FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1459B06-8C39-439A-917F-110AAD7D2FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE91FEF-E570-4CBD-8D5F-A68DCE3B6B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE91FEF-E570-4CBD-8D5F-A68DCE3B6B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE91FEF-E570-4CBD-8D5F-A68DCE3B6B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE91FEF-E570-4CBD-8D5F-A68DCE3B6B5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
