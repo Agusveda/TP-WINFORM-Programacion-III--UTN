@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP_WINFORM_PROGRAM3_
 {
-    public partial class Form1 : Form
+    public partial class MenuPrincipal : Form
     {
-        public Form1()
+        public MenuPrincipal()
         {
             InitializeComponent();
         }
@@ -22,9 +22,9 @@ namespace TP_WINFORM_PROGRAM3_
 
         }
 
-        private void HOLA_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("PRUEBA EXITOSA"); // hola
-        }
+      
+
+        
+        
     }
 }
