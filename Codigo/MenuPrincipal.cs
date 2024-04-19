@@ -22,9 +22,6 @@ namespace TP_WINFORM_PROGRAM3_
 
         }
 
-      
-
-        
         
     }
 }
