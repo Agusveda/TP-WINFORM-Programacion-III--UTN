@@ -28,3 +28,13 @@ E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFORM(PROGRAM3).cs
 E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFORM(PROGRAM3).csproj.CoreCompileInputs.cache
 E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFORM(PROGRAM3).exe
 E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFORM(PROGRAM3).pdb
+C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\TP-WINFORM(PROGRAM3).exe.config
+C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\TP-WINFORM(PROGRAM3).exe
+C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\TP-WINFORM(PROGRAM3).pdb
+C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFORM(PROGRAM3).csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP_WINFORM_PROGRAM3_.MenuPrincipal.resources
+C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP_WINFORM_PROGRAM3_.Properties.Resources.resources
+C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFORM(PROGRAM3).csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFORM(PROGRAM3).csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFORM(PROGRAM3).exe
+C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFORM(PROGRAM3).pdb
