@@ -26,10 +26,28 @@ namespace Funcionalidades
 
         public void setearConsulta(string consulta)
         {
+        Conexion_Comandos DATA = new Conexion_Comandos();
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
-
+           
         }
+
+        public void ejecutarLectura()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                lector = comando.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
 
 
 
