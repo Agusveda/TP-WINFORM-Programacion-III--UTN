@@ -9,18 +9,18 @@ namespace Clases
 {
     public class Articulo
     {
-        public int id;
+        public int id {  get; set; }
 
-        public string Codigo;
+        public string Codigo { get; set; }
 
-        public string Nombre;
+        public string Nombre { get; set; }
 
-        public string descipcion;
+        public string descipcion { get; set; }
 
-        public Marca idMarca; // toma del objeto Marca(clase)
+        public Marca idMarca { get; set; } // toma del objeto Marca(clase)
 
-        public Categoria idCategoria; // toma del objeto Categoria (clase)
+        public Categoria idCategoria { get; set; } // toma del objeto Categoria (clase)
 
-        public decimal Precio;
+        public decimal Precio { get; set; }
     }
 }

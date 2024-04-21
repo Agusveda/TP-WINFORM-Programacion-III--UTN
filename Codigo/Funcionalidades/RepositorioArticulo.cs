@@ -19,7 +19,7 @@ namespace Funcionalidades
             List<Articulo> listaArticulo = new List<Articulo>();
             Conexion_Comandos AccesoDatos = new Conexion_Comandos();
             try {
-            AccesoDatos.setearConsulta("select a.Id,A.Codigo, A.Nombre,A.Descripcion,A.Precio,m.Id as IdMarca ,M.Descripcion AS DescripcionMarca, c.Id as Idcategoria,C.Descripcion AS DescripcionCate,i.Id as IdImg, I.ImagenUrl from ARTICULOS A inner join MARCAS M on M.Id = A.IdMarca inner join CATEGORIAS C on C.Id = A.IdCategoria inner join IMAGENES I on I.IdArticulo = A.Id");
+            AccesoDatos.setearConsulta("select a.Id,A.Codigo, A.Nombre,A.Descripcion,A.Precio,m.Id as IdMarca ,M.Descripcion AS Marca, c.Id as Idcategoria,C.Descripcion AS Categoria,i.Id as IdImg, I.ImagenUrl from ARTICULOS A inner join MARCAS M on M.Id = A.IdMarca inner join CATEGORIAS C on C.Id = A.IdCategoria inner join IMAGENES I on I.IdArticulo = A.Id");
             AccesoDatos.ejecutarLectura();
 
             while(AccesoDatos.Lector.Read())
@@ -39,13 +39,13 @@ namespace Funcionalidades
                     
                     aux.idMarca = new Marca();
                     aux.idMarca.Id = (int)AccesoDatos.Lector["IdMarca"];
-                    aux.idMarca.Descripcion = (string)AccesoDatos.Lector["DescripcionMarca"];
+                    aux.idMarca.Descripcion = (string)AccesoDatos.Lector["Marca"];
 
                     //Creamos un aux categoria para poder cargar las columnas
 
                     aux.idCategoria = new Categoria();
                     aux.idCategoria.Id = (int)AccesoDatos.Lector["Idcategoria"];
-                    aux.idCategoria.Descripcion = (string)AccesoDatos.Lector["DescripcionCate"];
+                    aux.idCategoria.Descripcion = (string)AccesoDatos.Lector["Categoria"];
                    
 
 
@@ -53,8 +53,8 @@ namespace Funcionalidades
 
                 }
 
-                AccesoDatos.cerrarConexion();
 
+                AccesoDatos.cerrarConexion();
                 return listaArticulo;
 
 

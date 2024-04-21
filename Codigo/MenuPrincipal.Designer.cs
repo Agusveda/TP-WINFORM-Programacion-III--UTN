@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvarticulos = new System.Windows.Forms.DataGridView();
             this.lbNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lbCodigo = new System.Windows.Forms.Label();
@@ -48,16 +50,32 @@
             this.bQuitar = new System.Windows.Forms.Button();
             this.bAplicar = new System.Windows.Forms.Button();
             this.lbBusqueda = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvarticulos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.PbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbImagen)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(47, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Listado de articulos";
+            // 
+            // dgvarticulos
+            // 
+            this.dgvarticulos.AccessibleName = "";
+            this.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvarticulos.Location = new System.Drawing.Point(40, 84);
+            this.dgvarticulos.Name = "dgvarticulos";
+            this.dgvarticulos.Size = new System.Drawing.Size(542, 276);
+            this.dgvarticulos.TabIndex = 22;
             // 
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(347, 108);
+            this.lbNombre.Location = new System.Drawing.Point(611, 265);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.Size = new System.Drawing.Size(47, 13);
             this.lbNombre.TabIndex = 1;
@@ -65,16 +83,16 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(420, 105);
+            this.txtNombre.Location = new System.Drawing.Point(684, 262);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(136, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // lbCodigo
             // 
             this.lbCodigo.AutoSize = true;
             this.lbCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodigo.Location = new System.Drawing.Point(347, 82);
+            this.lbCodigo.Location = new System.Drawing.Point(611, 239);
             this.lbCodigo.Name = "lbCodigo";
             this.lbCodigo.Size = new System.Drawing.Size(43, 13);
             this.lbCodigo.TabIndex = 3;
@@ -82,22 +100,22 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(420, 79);
+            this.txtCodigo.Location = new System.Drawing.Point(684, 236);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(136, 20);
             this.txtCodigo.TabIndex = 4;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(420, 131);
+            this.txtDescripcion.Location = new System.Drawing.Point(684, 288);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(136, 20);
             this.txtDescripcion.TabIndex = 5;
             // 
             // lbDescripcion
             // 
             this.lbDescripcion.AutoSize = true;
-            this.lbDescripcion.Location = new System.Drawing.Point(347, 134);
+            this.lbDescripcion.Location = new System.Drawing.Point(611, 291);
             this.lbDescripcion.Name = "lbDescripcion";
             this.lbDescripcion.Size = new System.Drawing.Size(66, 13);
             this.lbDescripcion.TabIndex = 6;
@@ -106,7 +124,7 @@
             // lbMarca
             // 
             this.lbMarca.AutoSize = true;
-            this.lbMarca.Location = new System.Drawing.Point(347, 160);
+            this.lbMarca.Location = new System.Drawing.Point(611, 317);
             this.lbMarca.Name = "lbMarca";
             this.lbMarca.Size = new System.Drawing.Size(40, 13);
             this.lbMarca.TabIndex = 7;
@@ -114,15 +132,15 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(420, 157);
+            this.txtMarca.Location = new System.Drawing.Point(684, 314);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(100, 20);
+            this.txtMarca.Size = new System.Drawing.Size(136, 20);
             this.txtMarca.TabIndex = 8;
             // 
             // lbCategoria
             // 
             this.lbCategoria.AutoSize = true;
-            this.lbCategoria.Location = new System.Drawing.Point(347, 186);
+            this.lbCategoria.Location = new System.Drawing.Point(611, 343);
             this.lbCategoria.Name = "lbCategoria";
             this.lbCategoria.Size = new System.Drawing.Size(55, 13);
             this.lbCategoria.TabIndex = 9;
@@ -130,14 +148,14 @@
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(420, 183);
+            this.txtCategoria.Location = new System.Drawing.Point(684, 340);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtCategoria.Size = new System.Drawing.Size(136, 20);
             this.txtCategoria.TabIndex = 10;
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(350, 386);
+            this.bAgregar.Location = new System.Drawing.Point(583, 391);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(75, 23);
             this.bAgregar.TabIndex = 11;
@@ -146,7 +164,7 @@
             // 
             // bModificar
             // 
-            this.bModificar.Location = new System.Drawing.Point(445, 386);
+            this.bModificar.Location = new System.Drawing.Point(664, 391);
             this.bModificar.Name = "bModificar";
             this.bModificar.Size = new System.Drawing.Size(75, 23);
             this.bModificar.TabIndex = 12;
@@ -157,7 +175,7 @@
             // 
             this.bBorrar.BackColor = System.Drawing.Color.Transparent;
             this.bBorrar.ForeColor = System.Drawing.Color.Red;
-            this.bBorrar.Location = new System.Drawing.Point(707, 386);
+            this.bBorrar.Location = new System.Drawing.Point(745, 391);
             this.bBorrar.Name = "bBorrar";
             this.bBorrar.Size = new System.Drawing.Size(75, 23);
             this.bBorrar.TabIndex = 13;
@@ -167,16 +185,16 @@
             // PbImagen
             // 
             this.PbImagen.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.PbImagen.Location = new System.Drawing.Point(648, 79);
+            this.PbImagen.Location = new System.Drawing.Point(614, 65);
             this.PbImagen.Name = "PbImagen";
-            this.PbImagen.Size = new System.Drawing.Size(134, 124);
+            this.PbImagen.Size = new System.Drawing.Size(206, 165);
             this.PbImagen.TabIndex = 14;
             this.PbImagen.TabStop = false;
             // 
             // lbImagen
             // 
             this.lbImagen.AutoSize = true;
-            this.lbImagen.Location = new System.Drawing.Point(597, 79);
+            this.lbImagen.Location = new System.Drawing.Point(621, 49);
             this.lbImagen.Name = "lbImagen";
             this.lbImagen.Size = new System.Drawing.Size(45, 13);
             this.lbImagen.TabIndex = 15;
@@ -184,14 +202,14 @@
             // 
             // textFiltro
             // 
-            this.textFiltro.Location = new System.Drawing.Point(420, 41);
+            this.textFiltro.Location = new System.Drawing.Point(267, 58);
             this.textFiltro.Name = "textFiltro";
             this.textFiltro.Size = new System.Drawing.Size(222, 20);
             this.textFiltro.TabIndex = 17;
             // 
             // bQuitar
             // 
-            this.bQuitar.Location = new System.Drawing.Point(648, 41);
+            this.bQuitar.Location = new System.Drawing.Point(507, 62);
             this.bQuitar.Name = "bQuitar";
             this.bQuitar.Size = new System.Drawing.Size(75, 20);
             this.bQuitar.TabIndex = 18;
@@ -200,7 +218,7 @@
             // 
             // bAplicar
             // 
-            this.bAplicar.Location = new System.Drawing.Point(344, 41);
+            this.bAplicar.Location = new System.Drawing.Point(512, 32);
             this.bAplicar.Name = "bAplicar";
             this.bAplicar.Size = new System.Drawing.Size(70, 20);
             this.bAplicar.TabIndex = 19;
@@ -210,35 +228,18 @@
             // lbBusqueda
             // 
             this.lbBusqueda.AutoSize = true;
-            this.lbBusqueda.Location = new System.Drawing.Point(484, 25);
+            this.lbBusqueda.Location = new System.Drawing.Point(166, 61);
             this.lbBusqueda.Name = "lbBusqueda";
             this.lbBusqueda.Size = new System.Drawing.Size(95, 13);
             this.lbBusqueda.TabIndex = 20;
             this.lbBusqueda.Text = "Busqueda por filtro";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Listado de articulos";
-            // 
-            // dgvarticulos
-            // 
-            this.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvarticulos.Location = new System.Drawing.Point(40, 84);
-            this.dgvarticulos.Name = "dgvarticulos";
-            this.dgvarticulos.Size = new System.Drawing.Size(274, 276);
-            this.dgvarticulos.TabIndex = 22;
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(867, 450);
             this.Controls.Add(this.dgvarticulos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbBusqueda);
@@ -266,14 +267,16 @@
             this.Text = "MENÚ PRINCIPAL";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PbImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvarticulos;
         private System.Windows.Forms.Label lbNombre;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lbCodigo;
@@ -293,8 +296,6 @@
         private System.Windows.Forms.Button bQuitar;
         private System.Windows.Forms.Button bAplicar;
         private System.Windows.Forms.Label lbBusqueda;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvarticulos;
     }
 }
 

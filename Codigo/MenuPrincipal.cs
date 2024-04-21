@@ -25,18 +25,18 @@ namespace TP_WINFORM_PROGRAM3_
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            CargarListado();
+            RepositorioArticulo repoArticulo = new RepositorioArticulo();
+            ListaArticulos = repoArticulo.Listar(); // seteo lista
+                dgvarticulos.DataSource = ListaArticulos; //agrego al dgv la lista para que se pueda visualizar
+           // CargarListado();
         }
 
         private void CargarListado()
         {
-            RepositorioArticulo repoArticulo = new RepositorioArticulo();
+            
 
             try
             {
-
-                ListaArticulos = repoArticulo.Listar(); // seteo lista
-                dgvarticulos.DataSource = ListaArticulos; //agrego al dgv la lista para que se pueda visualizar
 
 
 
@@ -51,9 +51,10 @@ namespace TP_WINFORM_PROGRAM3_
 
         }
 
-        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ocultarColumnas()
         {
-
-        }
+            dgvarticulos.Columns["ImagenUrl"].Visible = false;
+            dgvarticulos.Columns["id"].Visible = false;
+        } // oculto columnas del dgv
     }
 }

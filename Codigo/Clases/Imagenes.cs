@@ -9,9 +9,9 @@ namespace Clases
     public class Imagenes
     {
 
-        public int id;
-        public Articulo idArticulo; //Llama al objeto Articulo
-        public string ImagenURL;
+        public int id { get; set; }
+        public Articulo idArticulo { get; set; } //Llama al objeto Articulo
+        public string ImagenURL { get; set; }
 
     }
 }

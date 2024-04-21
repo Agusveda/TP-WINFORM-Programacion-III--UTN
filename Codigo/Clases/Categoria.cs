@@ -8,7 +8,12 @@ namespace Clases
 {
     public class Categoria
     {
-        public int Id;
-        public string Descripcion;
+        public int Id { get; set; }
+        public string Descripcion { get; set; }
+
+        public override string ToString()
+        {
+            return Descripcion;
+        }
     }
 }
