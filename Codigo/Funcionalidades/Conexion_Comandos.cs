@@ -11,25 +11,26 @@ namespace Funcionalidades
     public class Conexion_Comandos
     {
 
-        SqlConnection conexion;
-        SqlCommand comando; 
-        SqlDataReader lector;
-        public SqlDataReader Lector { get { return lector; } }
+        private SqlConnection conexion;
+        private SqlCommand comando;
+        private SqlDataReader lector;
+        public SqlDataReader Lector
+        {
+            get { return lector; }
+        }
+
         public Conexion_Comandos()
         {
-            conexion = new SqlConnection("server= DESKTOP-DLD9B46; database=CATALOGO_P3_DB; Integrated Security = True");
-            //  conexion = new SqlConnection("server= FACU; database=CATALOGO_P3_DB; Integrated Security = True");
-            // conexion = new SqlConnection("server= DESKTOP-A3HCDG7; database=CATALOGO_P3_DB; Integrated Security = True");
-
+            //conexion = new SqlConnection("server= DESKTOP-DLD9B46; database=CATALOGO_P3_DB; Integrated Security = True");   
+            //conexion = new SqlConnection("server= FACU; database=CATALOGO_P3_DB; Integrated Security = True");
+            conexion = new SqlConnection("server= DESKTOP-A3HCDG7; database=CATALOGO_P3_DB; Integrated Security = True");
             comando = new SqlCommand();
         }
 
         public void setearConsulta(string consulta)
         {
-        Conexion_Comandos DATA = new Conexion_Comandos();
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
-           
         }
 
         public void ejecutarLectura()
@@ -39,15 +40,19 @@ namespace Funcionalidades
             {
                 conexion.Open();
                 lector = comando.ExecuteReader();
-
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
 
+        public void cerrarConexion()
+        {
+            if (lector != null)
+                lector.Close();
+            conexion.Close();
+        }
 
 
 

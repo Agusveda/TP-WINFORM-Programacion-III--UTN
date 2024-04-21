@@ -20,9 +20,9 @@ namespace TP_WINFORM_PROGRAM3_
         }
 
         //Linea para crear la conexion a la base de datos.
-        SqlConnection conexion = new SqlConnection("server=FACU;database=CATALOGO_P3_DB;integrated security=true");
+        SqlConnection conexion = new SqlConnection("server=DESKTOP-A3HCDG7;database=CATALOGO_P3_DB;integrated security=true");
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MenuPrincipal_Load(object sender, EventArgs e)
         {
             //Linea para mostrar los datos de la tabla en el datagridview
             string consulta = "SELECT * FROM ARTICULOS";
@@ -32,8 +32,9 @@ namespace TP_WINFORM_PROGRAM3_
             dataGridView2.DataSource = tabla;
         }
 
-        
+        private void MenuPrincipal_Load_1(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
