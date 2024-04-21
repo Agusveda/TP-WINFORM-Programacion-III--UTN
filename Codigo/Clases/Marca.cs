@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-     class Marca
+    public class Marca
     {
         public int Id;
         public string Descripcion;

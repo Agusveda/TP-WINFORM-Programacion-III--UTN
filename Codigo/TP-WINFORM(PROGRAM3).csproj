@@ -83,5 +83,15 @@
   <ItemGroup>
     <None Include="Iconos\logo_menu.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Clases\Clases.csproj">
+      <Project>{9fe91fef-e570-4cbd-8d5f-a68dce3b6b5a}</Project>
+      <Name>Clases</Name>
+    </ProjectReference>
+    <ProjectReference Include="Funcionalidades\Funcionalidades.csproj">
+      <Project>{1c9987b3-e6a5-4746-9144-fcff75aa5a39}</Project>
+      <Name>Funcionalidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-     class Articulo
+    public class Articulo
     {
         public int id;
 

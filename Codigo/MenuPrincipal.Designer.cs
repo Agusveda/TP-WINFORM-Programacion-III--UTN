@@ -44,14 +44,14 @@
             this.bBorrar = new System.Windows.Forms.Button();
             this.PbImagen = new System.Windows.Forms.PictureBox();
             this.lbImagen = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.textFiltro = new System.Windows.Forms.TextBox();
             this.bQuitar = new System.Windows.Forms.Button();
             this.bAplicar = new System.Windows.Forms.Button();
             this.lbBusqueda = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvarticulos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.PbImagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // lbNombre
@@ -182,14 +182,6 @@
             this.lbImagen.TabIndex = 15;
             this.lbImagen.Text = "Imagen:";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 78);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(329, 331);
-            this.dataGridView2.TabIndex = 16;
-            // 
             // textFiltro
             // 
             this.textFiltro.Location = new System.Drawing.Point(420, 41);
@@ -233,18 +225,26 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Listado de articulos";
             // 
+            // dgvarticulos
+            // 
+            this.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvarticulos.Location = new System.Drawing.Point(40, 84);
+            this.dgvarticulos.Name = "dgvarticulos";
+            this.dgvarticulos.Size = new System.Drawing.Size(274, 276);
+            this.dgvarticulos.TabIndex = 22;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvarticulos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbBusqueda);
             this.Controls.Add(this.bAplicar);
             this.Controls.Add(this.bQuitar);
             this.Controls.Add(this.textFiltro);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.lbImagen);
             this.Controls.Add(this.PbImagen);
             this.Controls.Add(this.bBorrar);
@@ -265,9 +265,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENÚ PRINCIPAL";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Load += new System.EventHandler(this.MenuPrincipal_Load_1);
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbImagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,12 +289,12 @@
         private System.Windows.Forms.Button bBorrar;
         private System.Windows.Forms.PictureBox PbImagen;
         private System.Windows.Forms.Label lbImagen;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TextBox textFiltro;
         private System.Windows.Forms.Button bQuitar;
         private System.Windows.Forms.Button bAplicar;
         private System.Windows.Forms.Label lbBusqueda;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvarticulos;
     }
 }
 

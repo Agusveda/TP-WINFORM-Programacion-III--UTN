@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-    class Imagenes
+    public class Imagenes
     {
 
         public int id;
