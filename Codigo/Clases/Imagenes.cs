@@ -10,8 +10,13 @@ namespace Clases
     {
 
         public int id { get; set; }
-        public Articulo idArticulo { get; set; } //Llama al objeto Articulo
+        public int idArticulo { get; set; }
         public string ImagenURL { get; set; }
+
+        public override string ToString()
+        {
+            return ImagenURL;
+        }
 
     }
 }

@@ -53,3 +53,8 @@ C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WI
 C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Clases.pdb
 C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Funcionalidades.pdb
 C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFORM(PROGRAM3).csproj.CopyComplete
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Clases.dll
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Funcionalidades.dll
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Clases.pdb
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Funcionalidades.pdb
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFO.E52F22AB.Up2Date

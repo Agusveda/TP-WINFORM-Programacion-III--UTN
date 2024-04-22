@@ -19,7 +19,7 @@ namespace Funcionalidades
             List<Articulo> listaArticulo = new List<Articulo>();
             Conexion_Comandos AccesoDatos = new Conexion_Comandos();
             try {
-            AccesoDatos.setearConsulta("select a.Id,A.Codigo, A.Nombre,A.Descripcion,A.Precio,m.Id as IdMarca ,M.Descripcion AS Marca, c.Id as Idcategoria,C.Descripcion AS Categoria,i.Id as IdImg, I.ImagenUrl from ARTICULOS A inner join MARCAS M on M.Id = A.IdMarca inner join CATEGORIAS C on C.Id = A.IdCategoria inner join IMAGENES I on I.IdArticulo = A.Id");
+            AccesoDatos.setearConsulta("select  a.Id, A.Codigo, A.Nombre,A.Descripcion,A.Precio,m.Id as IdMarca ,M.Descripcion AS DescripcionMarca, c.Id as Idcategoria,C.Descripcion AS DescripcionCate,i.Id,I.ImagenUrl from ARTICULOS A left join MARCAS M on M.Id = A.IdMarca left join CATEGORIAS C on C.Id = A.IdCategoria left join IMAGENES I on I.IdArticulo = A.Id");
             AccesoDatos.ejecutarLectura();
 
             while(AccesoDatos.Lector.Read())
@@ -46,10 +46,18 @@ namespace Funcionalidades
                     aux.idCategoria = new Categoria();
                     aux.idCategoria.Id = (int)AccesoDatos.Lector["Idcategoria"];
                     aux.idCategoria.Descripcion = (string)AccesoDatos.Lector["Categoria"];
-                   
+                    if(aux.idCategoria.Descripcion == null)
+                    {
+                        aux.idCategoria.Descripcion = "Sin descripcion";
+                    }
+
+                    aux.IdImagenUrl = new Imagenes();
+                    aux.IdImagenUrl.id = (int)AccesoDatos.Lector["IdImg"];
+                    if (!(AccesoDatos.Lector["ImagenURL"] is DBNull))
+                    aux.IdImagenUrl.ImagenURL = (string)AccesoDatos.Lector["ImagenUrl"];
 
 
-                    listaArticulo.Add(aux);
+                        listaArticulo.Add(aux);
 
                 }
 

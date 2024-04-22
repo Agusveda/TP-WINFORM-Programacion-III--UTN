@@ -22,5 +22,7 @@ namespace Clases
         public Categoria idCategoria { get; set; } // toma del objeto Categoria (clase)
 
         public decimal Precio { get; set; }
+
+        public Imagenes IdImagenUrl { get; set; } //toma del objeto Imagenes (clase)
     }
 }

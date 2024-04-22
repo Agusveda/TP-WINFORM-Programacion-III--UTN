@@ -44,14 +44,14 @@
             this.bAgregar = new System.Windows.Forms.Button();
             this.bModificar = new System.Windows.Forms.Button();
             this.bBorrar = new System.Windows.Forms.Button();
-            this.PbImagen = new System.Windows.Forms.PictureBox();
+            this.PbArticulo = new System.Windows.Forms.PictureBox();
             this.lbImagen = new System.Windows.Forms.Label();
             this.textFiltro = new System.Windows.Forms.TextBox();
             this.bQuitar = new System.Windows.Forms.Button();
             this.bAplicar = new System.Windows.Forms.Button();
             this.lbBusqueda = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,6 +69,7 @@
             this.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvarticulos.Location = new System.Drawing.Point(40, 84);
             this.dgvarticulos.Name = "dgvarticulos";
+            this.dgvarticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvarticulos.Size = new System.Drawing.Size(542, 276);
             this.dgvarticulos.TabIndex = 22;
             // 
@@ -182,14 +183,14 @@
             this.bBorrar.Text = "Borrar";
             this.bBorrar.UseVisualStyleBackColor = false;
             // 
-            // PbImagen
+            // PbArticulo
             // 
-            this.PbImagen.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.PbImagen.Location = new System.Drawing.Point(614, 65);
-            this.PbImagen.Name = "PbImagen";
-            this.PbImagen.Size = new System.Drawing.Size(206, 165);
-            this.PbImagen.TabIndex = 14;
-            this.PbImagen.TabStop = false;
+            this.PbArticulo.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.PbArticulo.Location = new System.Drawing.Point(614, 65);
+            this.PbArticulo.Name = "PbArticulo";
+            this.PbArticulo.Size = new System.Drawing.Size(206, 165);
+            this.PbArticulo.TabIndex = 14;
+            this.PbArticulo.TabStop = false;
             // 
             // lbImagen
             // 
@@ -247,7 +248,7 @@
             this.Controls.Add(this.bQuitar);
             this.Controls.Add(this.textFiltro);
             this.Controls.Add(this.lbImagen);
-            this.Controls.Add(this.PbImagen);
+            this.Controls.Add(this.PbArticulo);
             this.Controls.Add(this.bBorrar);
             this.Controls.Add(this.bModificar);
             this.Controls.Add(this.bAgregar);
@@ -268,7 +269,7 @@
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,7 +291,7 @@
         private System.Windows.Forms.Button bAgregar;
         private System.Windows.Forms.Button bModificar;
         private System.Windows.Forms.Button bBorrar;
-        private System.Windows.Forms.PictureBox PbImagen;
+        private System.Windows.Forms.PictureBox PbArticulo;
         private System.Windows.Forms.Label lbImagen;
         private System.Windows.Forms.TextBox textFiltro;
         private System.Windows.Forms.Button bQuitar;
