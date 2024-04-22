@@ -66,12 +66,19 @@
             // dgvarticulos
             // 
             this.dgvarticulos.AccessibleName = "";
+            this.dgvarticulos.AllowUserToAddRows = false;
+            this.dgvarticulos.AllowUserToDeleteRows = false;
+            this.dgvarticulos.AllowUserToResizeColumns = false;
+            this.dgvarticulos.AllowUserToResizeRows = false;
             this.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvarticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvarticulos.Location = new System.Drawing.Point(40, 84);
             this.dgvarticulos.Name = "dgvarticulos";
+            this.dgvarticulos.ReadOnly = true;
             this.dgvarticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvarticulos.Size = new System.Drawing.Size(542, 276);
             this.dgvarticulos.TabIndex = 22;
+            this.dgvarticulos.SelectionChanged += new System.EventHandler(this.dgvarticulos_SelectionChanged);
             // 
             // lbNombre
             // 
@@ -185,10 +192,11 @@
             // 
             // PbArticulo
             // 
-            this.PbArticulo.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.PbArticulo.BackColor = System.Drawing.SystemColors.ControlLight;
             this.PbArticulo.Location = new System.Drawing.Point(614, 65);
             this.PbArticulo.Name = "PbArticulo";
             this.PbArticulo.Size = new System.Drawing.Size(206, 165);
+            this.PbArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbArticulo.TabIndex = 14;
             this.PbArticulo.TabStop = false;
             // 
@@ -240,6 +248,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(867, 450);
             this.Controls.Add(this.dgvarticulos);
             this.Controls.Add(this.label1);

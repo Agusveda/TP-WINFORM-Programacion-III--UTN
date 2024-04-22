@@ -58,3 +58,8 @@ D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debu
 D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Clases.pdb
 D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Funcionalidades.pdb
 D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFO.E52F22AB.Up2Date
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Clases.dll
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Funcionalidades.dll
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Clases.pdb
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Funcionalidades.pdb
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFO.E52F22AB.Up2Date
