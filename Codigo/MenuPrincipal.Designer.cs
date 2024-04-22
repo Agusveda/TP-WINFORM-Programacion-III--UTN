@@ -202,14 +202,14 @@
             // 
             // textFiltro
             // 
-            this.textFiltro.Location = new System.Drawing.Point(267, 58);
+            this.textFiltro.Location = new System.Drawing.Point(162, 58);
             this.textFiltro.Name = "textFiltro";
             this.textFiltro.Size = new System.Drawing.Size(222, 20);
             this.textFiltro.TabIndex = 17;
             // 
             // bQuitar
             // 
-            this.bQuitar.Location = new System.Drawing.Point(507, 62);
+            this.bQuitar.Location = new System.Drawing.Point(466, 58);
             this.bQuitar.Name = "bQuitar";
             this.bQuitar.Size = new System.Drawing.Size(75, 20);
             this.bQuitar.TabIndex = 18;
@@ -218,7 +218,7 @@
             // 
             // bAplicar
             // 
-            this.bAplicar.Location = new System.Drawing.Point(512, 32);
+            this.bAplicar.Location = new System.Drawing.Point(390, 58);
             this.bAplicar.Name = "bAplicar";
             this.bAplicar.Size = new System.Drawing.Size(70, 20);
             this.bAplicar.TabIndex = 19;
@@ -228,7 +228,7 @@
             // lbBusqueda
             // 
             this.lbBusqueda.AutoSize = true;
-            this.lbBusqueda.Location = new System.Drawing.Point(166, 61);
+            this.lbBusqueda.Location = new System.Drawing.Point(61, 61);
             this.lbBusqueda.Name = "lbBusqueda";
             this.lbBusqueda.Size = new System.Drawing.Size(95, 13);
             this.lbBusqueda.TabIndex = 20;
