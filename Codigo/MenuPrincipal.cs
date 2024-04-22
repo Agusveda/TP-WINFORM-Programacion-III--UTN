@@ -41,7 +41,7 @@ namespace TP_WINFORM_PROGRAM3_
                 RepositorioArticulo repoArticulo = new RepositorioArticulo();
                 ListaArticulos = repoArticulo.Listar(); // seteo lista
                 dgvarticulos.DataSource = ListaArticulos; //agrego al dgv la lista para que se pueda visualizar
-                PbArticulo.Load(ListaArticulos[0].IdImagenUrl);
+                //PbArticulo.Load(ListaArticulos[0].IdImagenUrl);
             }
 
             catch (Exception ex)
