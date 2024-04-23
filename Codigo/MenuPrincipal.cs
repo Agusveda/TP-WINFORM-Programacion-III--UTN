@@ -82,5 +82,10 @@ namespace TP_WINFORM_PROGRAM3_
             }
         }
 
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaArticulo altaArticulo = new frmAltaArticulo();
+            altaArticulo.ShowDialog();
+        }
     }
 }
