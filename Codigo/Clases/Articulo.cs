@@ -15,7 +15,7 @@ namespace Clases
 
         public string Nombre { get; set; }
 
-        public string descipcion { get; set; }
+        public string Descripcion { get; set; }
 
         public Marca idMarca { get; set; } // toma del objeto Marca(clase)
 
@@ -24,5 +24,7 @@ namespace Clases
         public decimal Precio { get; set; }
 
         public Imagenes IdImagenUrl { get; set; } //toma del objeto Imagenes (clase)
+
+        
     }
 }

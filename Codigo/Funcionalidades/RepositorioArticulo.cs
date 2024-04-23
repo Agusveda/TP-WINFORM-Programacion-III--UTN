@@ -31,7 +31,7 @@ namespace Funcionalidades
                     aux.id = (int)AccesoDatos.Lector["Id"];
                     aux.Codigo = (string)AccesoDatos.Lector["Codigo"];
                     aux.Nombre = (string)AccesoDatos.Lector["Nombre"];
-                    aux.descipcion= (string)AccesoDatos.Lector["Descripcion"];
+                    aux.Descripcion= (string)AccesoDatos.Lector["Descripcion"];
                     aux.Precio = (decimal)AccesoDatos.Lector["Precio"];
 
 
@@ -84,6 +84,31 @@ namespace Funcionalidades
 
         }
 
+        public void agregar(Articulo articuloNuevo)
+        {
+            Conexion_Comandos AccesoDatos = new Conexion_Comandos();
+
+            try
+            {
+                //ID MARCA ???
+                //ID CATEGORIA ???
+                AccesoDatos.setearConsulta("insert into ARTICULOS ([CODIGO],[NOMBRE],[DESCRIPCION],[PRECIO]) VALUES('"+articuloNuevo.Codigo+"','"+articuloNuevo.Nombre+"','"+articuloNuevo.Descripcion+"','" +articuloNuevo.Precio+ "')"+"insert into IMAGENES([ImagenUrl]) VALUES ('"+articuloNuevo.IdImagenUrl.ImagenURL+"')");
+                AccesoDatos.ejecutarcomando();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            AccesoDatos.cerrarConexion();
+
+        }
+        
 
     }
+
+
+
 }

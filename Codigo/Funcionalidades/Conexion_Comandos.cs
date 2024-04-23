@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using Clases;
 
 
 namespace Funcionalidades
@@ -22,8 +23,8 @@ namespace Funcionalidades
         public Conexion_Comandos()
         {
             //conexion = new SqlConnection("server= DESKTOP-DLD9B46; database=CATALOGO_P3_DB; Integrated Security = True");   
-            //conexion = new SqlConnection("server= FACU; database=CATALOGO_P3_DB; Integrated Security = True");
-           conexion = new SqlConnection("server= DESKTOP-A3HCDG7\\SQLEXPRESS; database=CATALOGO_P3_DB; Integrated Security = True");
+            conexion = new SqlConnection("server= FACU; database=CATALOGO_P3_DB; Integrated Security = True");
+           //conexion = new SqlConnection("server= DESKTOP-A3HCDG7\\SQLEXPRESS; database=CATALOGO_P3_DB; Integrated Security = True");
 
 
             comando = new SqlCommand();
@@ -56,7 +57,21 @@ namespace Funcionalidades
             conexion.Close();
         }
 
+        public void ejecutarcomando()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
+       
 
 
 

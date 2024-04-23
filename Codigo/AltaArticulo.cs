@@ -26,24 +26,29 @@ namespace TP_WINFORM_PROGRAM3_
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Articulo auxArt = new Articulo();
+            Articulo aux = new Articulo();
+            RepositorioArticulo repoArticulo = new RepositorioArticulo();
            try 
             {
-                //articulo.Codigo = txtCodigo.Text;
-                //articulo.Nombre = txtNombre.Text;
-                //articulo.descipcion = txtDescripcion.Text;
-                //articulo.idMarca =  txtNombre.Text;
-                //articulo.idCategoria = txtNombre.Text;
+                aux.Codigo = (string)txtCodigo.Text;
+                aux.Nombre = (string)txtNombre.Text;
+                aux.Descripcion = (string)txtDescripcion.Text;
+                aux.Precio = int.Parse(txtPrecio.Text);
+                aux.idMarca = new Marca();
+                aux.idMarca.Id = int.Parse(txtMarca.Text);
+                aux.idCategoria = new Categoria();
+                aux.idCategoria.Id = int.Parse(txtCategoria.Text);
+                aux.IdImagenUrl = new Imagenes();
+                aux.IdImagenUrl.ImagenURL = (string)txtImagenUrl.Text;
+                repoArticulo.agregar(aux);
                 
-                auxArt.Codigo = (string)txtNombre.Text;
-                auxArt.Nombre = (string)txtDescripcion.Text;
-                auxArt.descipcion = (string)txtDescripcion.Text;
-                auxArt.Precio = txtPrecio.Text;
             } 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        
     }
 }

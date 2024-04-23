@@ -1,0 +1,9 @@
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Funcionalidades\bin\Release\Funcionalidades.dll
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Funcionalidades\bin\Release\Funcionalidades.pdb
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Funcionalidades\bin\Release\Clases.dll
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Funcionalidades\bin\Release\Clases.pdb
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Funcionalidades\obj\Release\Funcionalidades.csproj.AssemblyReference.cache
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Funcionalidades\obj\Release\Funcionalidades.csproj.CoreCompileInputs.cache
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Funcionalidades\obj\Release\Funciona.62B5C317.Up2Date
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Funcionalidades\obj\Release\Funcionalidades.dll
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Funcionalidades\obj\Release\Funcionalidades.pdb
