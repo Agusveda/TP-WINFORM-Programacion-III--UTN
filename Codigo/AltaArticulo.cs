@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Clases;
 using Funcionalidades;
+ 
 
 namespace TP_WINFORM_PROGRAM3_
 {
@@ -26,9 +27,9 @@ namespace TP_WINFORM_PROGRAM3_
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Articulo auxArt = new Articulo();
            try 
             {
+            Articulo auxArt = new Articulo();
                 //articulo.Codigo = txtCodigo.Text;
                 //articulo.Nombre = txtNombre.Text;
                 //articulo.descipcion = txtDescripcion.Text;
@@ -38,12 +39,21 @@ namespace TP_WINFORM_PROGRAM3_
                 auxArt.Codigo = (string)txtNombre.Text;
                 auxArt.Nombre = (string)txtDescripcion.Text;
                 auxArt.descipcion = (string)txtDescripcion.Text;
-                auxArt.Precio = txtPrecio.Text;
+                auxArt.Precio = decimal.Parse(txtPrecio.Text);
             } 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void frmAltaArticulo_Load(object sender, EventArgs e)
+        {
+            RepositorioMarca repoMarca = new RepositorioMarca();
+            
+            CboMarca.DataSource = repoMarca.Listar(); // seteo desplegable marca
+            CboMarca.ValueMember = "ID";
+            CboMarca.DisplayMember = "Descripcion";
         }
     }
 }
