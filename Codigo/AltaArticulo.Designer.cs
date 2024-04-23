@@ -30,7 +30,6 @@
         {
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.lbCategoria = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
             this.lbMarca = new System.Windows.Forms.Label();
             this.lbDescripcion = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -45,6 +44,7 @@
             this.lbImagenUrl = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lbCodigo = new System.Windows.Forms.Label();
+            this.CboMarca = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PbArticulo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,13 +63,6 @@
             this.lbCategoria.Size = new System.Drawing.Size(55, 13);
             this.lbCategoria.TabIndex = 19;
             this.lbCategoria.Text = "Categoria:";
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.Location = new System.Drawing.Point(308, 149);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(136, 20);
-            this.txtMarca.TabIndex = 18;
             // 
             // lbMarca
             // 
@@ -190,11 +183,20 @@
             this.lbCodigo.TabIndex = 29;
             this.lbCodigo.Text = "Codigo: ";
             // 
+            // CboMarca
+            // 
+            this.CboMarca.FormattingEnabled = true;
+            this.CboMarca.Location = new System.Drawing.Point(308, 149);
+            this.CboMarca.Name = "CboMarca";
+            this.CboMarca.Size = new System.Drawing.Size(136, 21);
+            this.CboMarca.TabIndex = 31;
+            // 
             // frmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CboMarca);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lbCodigo);
             this.Controls.Add(this.lbImagenUrl);
@@ -206,7 +208,6 @@
             this.Controls.Add(this.PbArticulo);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.lbCategoria);
-            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.lbMarca);
             this.Controls.Add(this.lbDescripcion);
             this.Controls.Add(this.txtDescripcion);
@@ -214,6 +215,7 @@
             this.Controls.Add(this.lbNombre);
             this.Name = "frmAltaArticulo";
             this.Text = "AltaArticulo";
+            this.Load += new System.EventHandler(this.frmAltaArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,7 +226,6 @@
 
         private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label lbCategoria;
-        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label lbMarca;
         private System.Windows.Forms.Label lbDescripcion;
         private System.Windows.Forms.TextBox txtDescripcion;
@@ -239,5 +240,6 @@
         private System.Windows.Forms.Label lbImagenUrl;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lbCodigo;
+        private System.Windows.Forms.ComboBox CboMarca;
     }
 }
