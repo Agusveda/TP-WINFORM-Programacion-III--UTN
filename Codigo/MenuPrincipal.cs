@@ -64,6 +64,7 @@ namespace TP_WINFORM_PROGRAM3_
             {
                 Articulo seleccion = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
                 cargarImagen(seleccion.IdImagenUrl.ImagenURL);
+                
             }
             
         }
@@ -86,7 +87,28 @@ namespace TP_WINFORM_PROGRAM3_
         {
             frmAltaArticulo altaArticulo = new frmAltaArticulo();
             altaArticulo.ShowDialog();
-            CargarListado();
+            
+        }
+
+        private void dgvarticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvarticulos.SelectedRows.Count >= 0)
+                {
+                    txtCodigo.Text = dgvarticulos.SelectedRows[0].Cells[1].Value.ToString();
+                    txtNombre.Text = dgvarticulos.SelectedRows[0].Cells[2].Value.ToString();
+                    txtDescripcion.Text = dgvarticulos.SelectedRows[0].Cells[3].Value.ToString();
+                    txtMarca.Text = dgvarticulos.SelectedRows[0].Cells[4].Value.ToString();
+                    txtCategoria.Text = dgvarticulos.SelectedRows[0].Cells[5].Value.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error");
+            }
+          
         }
     }
 }

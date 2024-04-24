@@ -78,6 +78,7 @@
             this.dgvarticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvarticulos.Size = new System.Drawing.Size(542, 276);
             this.dgvarticulos.TabIndex = 22;
+            this.dgvarticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvarticulos_CellContentClick);
             this.dgvarticulos.SelectionChanged += new System.EventHandler(this.dgvarticulos_SelectionChanged);
             // 
             // lbNombre
@@ -93,6 +94,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(684, 262);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(136, 20);
             this.txtNombre.TabIndex = 2;
             // 
@@ -110,6 +112,7 @@
             // 
             this.txtCodigo.Location = new System.Drawing.Point(684, 236);
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(136, 20);
             this.txtCodigo.TabIndex = 4;
             // 
@@ -117,6 +120,7 @@
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(684, 288);
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(136, 20);
             this.txtDescripcion.TabIndex = 5;
             // 
@@ -142,6 +146,7 @@
             // 
             this.txtMarca.Location = new System.Drawing.Point(684, 314);
             this.txtMarca.Name = "txtMarca";
+            this.txtMarca.ReadOnly = true;
             this.txtMarca.Size = new System.Drawing.Size(136, 20);
             this.txtMarca.TabIndex = 8;
             // 
@@ -158,6 +163,7 @@
             // 
             this.txtCategoria.Location = new System.Drawing.Point(684, 340);
             this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.ReadOnly = true;
             this.txtCategoria.Size = new System.Drawing.Size(136, 20);
             this.txtCategoria.TabIndex = 10;
             // 
