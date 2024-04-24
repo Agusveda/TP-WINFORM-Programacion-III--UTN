@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.lbCategoria = new System.Windows.Forms.Label();
             this.lbMarca = new System.Windows.Forms.Label();
             this.lbDescripcion = new System.Windows.Forms.Label();
@@ -41,15 +40,9 @@
             this.lbPrecio = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.CboMarca = new System.Windows.Forms.ComboBox();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PbArticulo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Location = new System.Drawing.Point(251, 170);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(137, 20);
-            this.txtCategoria.TabIndex = 20;
             // 
             // lbCategoria
             // 
@@ -156,18 +149,27 @@
             this.CboMarca.Size = new System.Drawing.Size(137, 21);
             this.CboMarca.TabIndex = 26;
             // 
+            // cboCategoria
+            // 
+            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(251, 169);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(137, 21);
+            this.cboCategoria.TabIndex = 27;
+            // 
             // frmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.CboMarca);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lbPrecio);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.PbArticulo);
-            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.lbCategoria);
             this.Controls.Add(this.lbMarca);
             this.Controls.Add(this.lbDescripcion);
@@ -184,8 +186,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label lbCategoria;
         private System.Windows.Forms.Label lbMarca;
         private System.Windows.Forms.Label lbDescripcion;
@@ -198,5 +198,6 @@
         private System.Windows.Forms.Label lbPrecio;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.ComboBox CboMarca;
+        private System.Windows.Forms.ComboBox cboCategoria;
     }
 }

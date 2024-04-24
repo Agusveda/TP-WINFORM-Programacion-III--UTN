@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -54,6 +55,17 @@ namespace TP_WINFORM_PROGRAM3_
             CboMarca.DataSource = repoMarca.Listar(); // seteo desplegable marca
             CboMarca.ValueMember = "ID";
             CboMarca.DisplayMember = "Descripcion";
+
+            RepositorioCategoria repoCategoria = new RepositorioCategoria();
+
+            cboCategoria.DataSource = repoCategoria.Listar(); // seteo desplegable categoria
+            cboCategoria.ValueMember = "ID";
+            cboCategoria.DisplayMember = "Descripcion";
+
         }
+
+        //private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        //{}
+        //Ctrl+K+C
     }
 }
