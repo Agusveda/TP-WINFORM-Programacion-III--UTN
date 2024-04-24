@@ -78,7 +78,7 @@
             this.dgvarticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvarticulos.Size = new System.Drawing.Size(542, 276);
             this.dgvarticulos.TabIndex = 22;
-            this.dgvarticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvarticulos_CellContentClick);
+            this.dgvarticulos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvarticulos_CellContentDoubleClick);
             this.dgvarticulos.SelectionChanged += new System.EventHandler(this.dgvarticulos_SelectionChanged);
             // 
             // lbNombre

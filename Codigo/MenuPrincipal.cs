@@ -90,7 +90,9 @@ namespace TP_WINFORM_PROGRAM3_
             
         }
 
-        private void dgvarticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       
+
+        private void dgvarticulos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -108,7 +110,6 @@ namespace TP_WINFORM_PROGRAM3_
 
                 MessageBox.Show("Error");
             }
-          
         }
     }
 }

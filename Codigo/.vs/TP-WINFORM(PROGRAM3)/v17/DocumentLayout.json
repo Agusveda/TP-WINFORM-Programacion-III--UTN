@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|e:\\utn\\tp-winform-programacion-iii--utn\\codigo\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|solutionrelative:menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|solutionrelative:menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9FE91FEF-E570-4CBD-8D5F-A68DCE3B6B5A}|Clases\\Clases.csproj|E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\clases\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FE91FEF-E570-4CBD-8D5F-A68DCE3B6B5A}|Clases\\Clases.csproj|solutionrelative:clases\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|e:\\utn\\tp-winform-programacion-iii--utn\\codigo\\altaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|solutionrelative:menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\altaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|solutionrelative:altaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,20 +23,16 @@
       "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\repositoriomarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|e:\\utn\\tp-winform-programacion-iii--utn\\codigo\\funcionalidades\\conexion_comandos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\conexion_comandos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\funcionalidades\\repositoriocategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\repositoriocategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\altaarticulo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|solutionrelative:altaarticulo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\funcionalidades\\repositorioarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\repositorioarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\funcionalidades\\conexion_comandos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C9987B3-E6A5-4746-9144-FCFF75AA5A39}|Funcionalidades\\Funcionalidades.csproj|solutionrelative:funcionalidades\\conexion_comandos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1459B06-8C39-439A-917F-110AAD7D2FA5}|TP-WINFORM(PROGRAM3).csproj|E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\altaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -50,19 +46,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "RepositorioCategoria.cs",
               "DocumentMoniker": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\Funcionalidades\\RepositorioCategoria.cs",
               "RelativeDocumentMoniker": "Funcionalidades\\RepositorioCategoria.cs",
               "ToolTip": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\Funcionalidades\\RepositorioCategoria.cs",
               "RelativeToolTip": "Funcionalidades\\RepositorioCategoria.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBUAAABEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T01:21:23.055Z"
+              "WhenOpened": "2024-04-24T01:21:23.055Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -72,7 +69,7 @@
               "RelativeDocumentMoniker": "Funcionalidades\\RepositorioMarca.cs",
               "ToolTip": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\Funcionalidades\\RepositorioMarca.cs",
               "RelativeToolTip": "Funcionalidades\\RepositorioMarca.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T22:41:28.182Z",
               "EditorCaption": ""
@@ -85,26 +82,14 @@
               "RelativeDocumentMoniker": "AltaArticulo.cs",
               "ToolTip": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\AltaArticulo.cs",
               "RelativeToolTip": "AltaArticulo.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwDIAAAAnAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwB4AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T00:31:30.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AltaArticulo.Designer.cs",
-              "DocumentMoniker": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\AltaArticulo.Designer.cs",
-              "RelativeDocumentMoniker": "AltaArticulo.Designer.cs",
-              "ToolTip": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\AltaArticulo.Designer.cs",
-              "RelativeToolTip": "AltaArticulo.Designer.cs",
-              "ViewState": "AQIAAJMAAAAAAAAAAAAnwJ8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T01:39:52.419Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Categoria.cs",
               "DocumentMoniker": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\Clases\\Categoria.cs",
               "RelativeDocumentMoniker": "Clases\\Categoria.cs",
@@ -117,13 +102,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MenuPrincipal.cs",
               "DocumentMoniker": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\MenuPrincipal.cs",
               "RelativeDocumentMoniker": "MenuPrincipal.cs",
               "ToolTip": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\MenuPrincipal.cs",
               "RelativeToolTip": "MenuPrincipal.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAjwGYAAABMAAAA",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAxwFwAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T23:15:08.792Z",
               "EditorCaption": ""
@@ -142,38 +127,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Conexion_Comandos.cs",
               "DocumentMoniker": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\Funcionalidades\\Conexion_Comandos.cs",
               "RelativeDocumentMoniker": "Funcionalidades\\Conexion_Comandos.cs",
               "ToolTip": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\Funcionalidades\\Conexion_Comandos.cs",
               "RelativeToolTip": "Funcionalidades\\Conexion_Comandos.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwBcAAAANAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAmwBcAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-24T17:26:43.979Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "RepositorioArticulo.cs",
               "DocumentMoniker": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\Funcionalidades\\RepositorioArticulo.cs",
               "RelativeDocumentMoniker": "Funcionalidades\\RepositorioArticulo.cs",
               "ToolTip": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\Funcionalidades\\RepositorioArticulo.cs",
               "RelativeToolTip": "Funcionalidades\\RepositorioArticulo.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAAC1AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T00:48:14.277Z"
+              "WhenOpened": "2024-04-23T00:48:14.277Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "AltaArticulo.cs [Dise\u00F1o]",
               "DocumentMoniker": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\AltaArticulo.cs",
               "RelativeDocumentMoniker": "AltaArticulo.cs",
-              "ToolTip": "D:\\TRANSFERENCIA\\CODIGO\\WINFORM\\TP-WINFORM-Programacion-III--UTN\\Codigo\\AltaArticulo.cs [Dise\u00F1o]",
+              "ToolTip": "E:\\UTN\\TP-WINFORM-Programacion-III--UTN\\Codigo\\AltaArticulo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AltaArticulo.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T23:13:39.514Z"
+              "WhenOpened": "2024-04-23T23:13:39.514Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
