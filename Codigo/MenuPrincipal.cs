@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient; //Libreria para todo lo relacionado con la base de datos
 using Funcionalidades;
 using Clases;
+using System.Globalization;
+using static System.Net.Mime.MediaTypeNames;
 namespace TP_WINFORM_PROGRAM3_
 {
     public partial class MenuPrincipal : Form
@@ -41,7 +43,7 @@ namespace TP_WINFORM_PROGRAM3_
                 RepositorioArticulo repoArticulo = new RepositorioArticulo();
                 ListaArticulos = repoArticulo.Listar(); // seteo lista
                 dgvarticulos.DataSource = ListaArticulos; //agrego al dgv la lista para que se pueda visualizar
-                PbArticulo.Load(ListaArticulos[0].IdImagenUrl.ImagenURL);
+                
             }
 
             catch (Exception ex)
@@ -58,30 +60,9 @@ namespace TP_WINFORM_PROGRAM3_
             dgvarticulos.Columns["id"].Visible = false;
         } // oculto columnas del dgv
 
-        private void dgvarticulos_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvarticulos.CurrentRow != null)
-            {
-                Articulo seleccion = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
-                cargarImagen(seleccion.IdImagenUrl.ImagenURL);
-                
-            }
-            
-        }
         
-        private void cargarImagen(string imagen)
-        {
-            try
-            {
-                PbArticulo.Load(imagen);
-            }
-            catch (Exception)
-            {
-
-                PbArticulo.Load("https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png");
-
-            }
-        }
+        
+       
 
         private void bAgregar_Click(object sender, EventArgs e)
         {
@@ -92,23 +73,33 @@ namespace TP_WINFORM_PROGRAM3_
 
        
 
-        private void dgvarticulos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void bDetalle_Click(object sender, EventArgs e)
         {
             try
             {
-                if (dgvarticulos.SelectedRows.Count >= 0)
+                if (dgvarticulos.SelectedRows.Count > 0)
+                {  
+                    string codigo = dgvarticulos.SelectedRows[0].Cells[1].Value.ToString();
+                    string nombre = dgvarticulos.SelectedRows[0].Cells[2].Value.ToString();
+                    string descripcion = dgvarticulos.SelectedRows[0].Cells[3].Value.ToString();
+                    string marca = dgvarticulos.SelectedRows[0].Cells[4].Value.ToString();
+                    string categoria = dgvarticulos.SelectedRows[0].Cells[5].Value.ToString();
+                    string precio = dgvarticulos.SelectedRows[0].Cells[6].Value.ToString();                
+                    Articulo seleccion = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+                    string url = seleccion.IdImagenUrl.ImagenURL;
+                    Detalle frmdetalle = new Detalle(codigo, nombre, descripcion, marca, categoria, precio,url);
+                    frmdetalle.ShowDialog();
+                }
+                else
                 {
-                    txtCodigo.Text = dgvarticulos.SelectedRows[0].Cells[1].Value.ToString();
-                    txtNombre.Text = dgvarticulos.SelectedRows[0].Cells[2].Value.ToString();
-                    txtDescripcion.Text = dgvarticulos.SelectedRows[0].Cells[3].Value.ToString();
-                    txtMarca.Text = dgvarticulos.SelectedRows[0].Cells[4].Value.ToString();
-                    txtCategoria.Text = dgvarticulos.SelectedRows[0].Cells[5].Value.ToString();
+                    MessageBox.Show("Seleccione una fila antes de ver el detalle.");
                 }
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Error");
+                MessageBox.Show("Error, seleccione otra fila"); ;
             }
         }
     }
