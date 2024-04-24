@@ -86,6 +86,7 @@ namespace TP_WINFORM_PROGRAM3_
         {
             frmAltaArticulo altaArticulo = new frmAltaArticulo();
             altaArticulo.ShowDialog();
+            CargarListado();
         }
     }
 }

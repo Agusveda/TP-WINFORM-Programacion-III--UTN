@@ -28,19 +28,19 @@ namespace TP_WINFORM_PROGRAM3_
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            RepositorioArticulo repoart = new RepositorioArticulo();
            try 
             {
             Articulo auxArt = new Articulo();
-                //articulo.Codigo = txtCodigo.Text;
-                //articulo.Nombre = txtNombre.Text;
-                //articulo.descipcion = txtDescripcion.Text;
-                //articulo.idMarca =  txtNombre.Text;
-                //articulo.idCategoria = txtNombre.Text;
-                
-                auxArt.Codigo = (string)txtNombre.Text;
-                auxArt.Nombre = (string)txtDescripcion.Text;
-                auxArt.descipcion = (string)txtDescripcion.Text;
+                auxArt.Codigo = txtCodigo.Text;
+                auxArt.Nombre = txtNombre.Text;
+                auxArt.descripcion = txtDescripcion.Text;
+                auxArt.idCategoria= (Categoria)cboCategoria.SelectedItem;
+                auxArt.idMarca = (Marca)CboMarca.SelectedItem;
                 auxArt.Precio = decimal.Parse(txtPrecio.Text);
+
+                repoart.Agregar(auxArt);
+                MessageBox.Show("agregado exitosamente");
             } 
             catch (Exception ex)
             {

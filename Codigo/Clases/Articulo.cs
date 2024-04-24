@@ -15,7 +15,7 @@ namespace Clases
 
         public string Nombre { get; set; }
 
-        public string descipcion { get; set; }
+        public string descripcion { get; set; }
 
         public Marca idMarca { get; set; } // toma del objeto Marca(clase)
 

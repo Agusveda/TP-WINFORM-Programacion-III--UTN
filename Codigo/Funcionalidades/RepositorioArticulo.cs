@@ -19,7 +19,7 @@ namespace Funcionalidades
             List<Articulo> listaArticulo = new List<Articulo>();
             Conexion_Comandos AccesoDatos = new Conexion_Comandos();
             try {
-            AccesoDatos.setearConsulta("select  a.Id, A.Codigo, A.Nombre,A.Descripcion,A.Precio,m.Id as IdMarca ,M.Descripcion AS DescripcionMarca, c.Id as Idcategoria,C.Descripcion AS DescripcionCate,i.Id as idimg,I.ImagenUrl from ARTICULOS A left join MARCAS M on M.Id = A.IdMarca left join CATEGORIAS C on C.Id = A.IdCategoria left join IMAGENES I on I.IdArticulo = A.Id\r\n");
+            AccesoDatos.setearConsulta("select  a.Id, A.Codigo, A.Nombre,A.Descripcion,A.Precio,m.Id as IdMarca ,M.Descripcion AS DescripcionMarca, c.Id as Idcategoria,C.Descripcion AS DescripcionCate,i.Id as idimg,I.ImagenUrl from ARTICULOS A left join MARCAS M on M.Id = A.IdMarca left join CATEGORIAS C on C.Id = A.IdCategoria left join IMAGENES I on I.IdArticulo = A.Id");
             AccesoDatos.ejecutarLectura();
 
             while(AccesoDatos.Lector.Read())
@@ -31,7 +31,7 @@ namespace Funcionalidades
                     aux.id = (int)AccesoDatos.Lector["Id"];
                     aux.Codigo = (string)AccesoDatos.Lector["Codigo"];
                     aux.Nombre = (string)AccesoDatos.Lector["Nombre"];
-                    aux.descipcion= (string)AccesoDatos.Lector["Descripcion"];
+                    aux.descripcion= (string)AccesoDatos.Lector["Descripcion"];
                     aux.Precio = (decimal)AccesoDatos.Lector["Precio"];
 
 
@@ -56,10 +56,20 @@ namespace Funcionalidades
                     aux.idCategoria.Descripcion = (string)AccesoDatos.Lector["DescripcionCate"];
                     }
 
+
                     aux.IdImagenUrl = new Imagenes();
-                    aux.IdImagenUrl.id = (int)AccesoDatos.Lector["IdImg"];
-                    if (!(AccesoDatos.Lector["ImagenURL"] is DBNull))
-                    aux.IdImagenUrl.ImagenURL = (string)AccesoDatos.Lector["ImagenUrl"];
+                    if (AccesoDatos.Lector["ImagenURL"] is DBNull && AccesoDatos.Lector["IdImg"] is DBNull)
+                    {
+                        aux.IdImagenUrl.id = 0;
+                        aux.IdImagenUrl.ImagenURL = "";
+
+                    }
+                    else
+                    {
+
+                        aux.IdImagenUrl.id = (int)AccesoDatos.Lector["IdImg"];
+                        aux.IdImagenUrl.ImagenURL = (string)AccesoDatos.Lector["ImagenUrl"];
+                    }
 
 
                         listaArticulo.Add(aux);
@@ -84,6 +94,33 @@ namespace Funcionalidades
 
         }
 
+        public void Agregar(Articulo nuevoarticulo)
+        {
+            Conexion_Comandos Accesodatos = new Conexion_Comandos();
+            try
+            {
 
+                Accesodatos.setearConsulta("Insert into ARTICULOS(Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio) values (@Codigo,@Nombre,@Descripcion,@IdMarca,@IdCategoria,@Precio)");
+                Accesodatos.setearParametros("@Codigo", nuevoarticulo.Codigo);
+                Accesodatos.setearParametros("@Nombre", nuevoarticulo.Nombre);
+                Accesodatos.setearParametros("@Descripcion", nuevoarticulo.descripcion);
+                Accesodatos.setearParametros("@IdMarca", nuevoarticulo.idMarca.Id);
+                Accesodatos.setearParametros("@IdCategoria", nuevoarticulo.idCategoria.Id);
+                Accesodatos.setearParametros("@Precio", nuevoarticulo.Precio);
+                Accesodatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Accesodatos.cerrarConexion();
+            }
+
+
+
+        }
     }
 }

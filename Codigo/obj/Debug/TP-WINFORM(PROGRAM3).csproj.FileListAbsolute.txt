@@ -65,3 +65,4 @@ E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\bin\Debug\Funcionalidades.pdb
 E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFO.E52F22AB.Up2Date
 D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP_WINFORM_PROGRAM3_.frmAltaArticulo.resources
 E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP_WINFORM_PROGRAM3_.frmAltaArticulo.resources
+C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP_WINFORM_PROGRAM3_.frmAltaArticulo.resources
