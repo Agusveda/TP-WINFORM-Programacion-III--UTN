@@ -102,5 +102,15 @@ namespace TP_WINFORM_PROGRAM3_
                 MessageBox.Show("Error, seleccione otra fila"); ;
             }
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+
+            frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
+            modificar.ShowDialog();
+            CargarListado();
+        }
     }
 }

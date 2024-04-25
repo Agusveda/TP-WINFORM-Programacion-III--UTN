@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvarticulos = new System.Windows.Forms.DataGridView();
             this.bAgregar = new System.Windows.Forms.Button();
-            this.bModificar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.bBorrar = new System.Windows.Forms.Button();
             this.textFiltro = new System.Windows.Forms.TextBox();
             this.bQuitar = new System.Windows.Forms.Button();
@@ -78,14 +78,15 @@
             this.bAgregar.UseVisualStyleBackColor = true;
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
-            // bModificar
+            // btnModificar
             // 
-            this.bModificar.Location = new System.Drawing.Point(492, 401);
-            this.bModificar.Name = "bModificar";
-            this.bModificar.Size = new System.Drawing.Size(75, 23);
-            this.bModificar.TabIndex = 12;
-            this.bModificar.Text = "Modificar";
-            this.bModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Location = new System.Drawing.Point(492, 401);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 12;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // bBorrar
             // 
@@ -157,7 +158,7 @@
             this.Controls.Add(this.bQuitar);
             this.Controls.Add(this.textFiltro);
             this.Controls.Add(this.bBorrar);
-            this.Controls.Add(this.bModificar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.bAgregar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuPrincipal";
@@ -175,7 +176,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvarticulos;
         private System.Windows.Forms.Button bAgregar;
-        private System.Windows.Forms.Button bModificar;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button bBorrar;
         private System.Windows.Forms.TextBox textFiltro;
         private System.Windows.Forms.Button bQuitar;

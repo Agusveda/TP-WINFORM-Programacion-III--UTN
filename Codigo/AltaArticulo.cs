@@ -16,9 +16,16 @@ namespace TP_WINFORM_PROGRAM3_
 {
     public partial class frmAltaArticulo : Form
     {
+        private Articulo articulo = null;
         public frmAltaArticulo()
         {
             InitializeComponent();
+        }
+
+        public frmAltaArticulo(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -55,6 +62,15 @@ namespace TP_WINFORM_PROGRAM3_
             CboMarca.DataSource = repoMarca.Listar(); // seteo desplegable marca
             CboMarca.ValueMember = "ID";
             CboMarca.DisplayMember = "Descripcion";
+
+            if(articulo != null)
+            {
+                txtCodigo.Text = articulo.Codigo;
+                txtNombre.Text = articulo.Nombre;
+                txtDescripcion.Text = articulo.descripcion;
+                txtPrecio.Text= articulo.Precio.ToString();
+
+            }
 
             RepositorioCategoria repoCategoria = new RepositorioCategoria();
 
