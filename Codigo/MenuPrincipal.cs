@@ -54,6 +54,12 @@ namespace TP_WINFORM_PROGRAM3_
 
         }
 
+
+        
+
+
+
+
         private void ocultarColumnas()
         {
             dgvarticulos.Columns["ImagenUrl"].Visible = false;

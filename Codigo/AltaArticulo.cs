@@ -26,7 +26,21 @@ namespace TP_WINFORM_PROGRAM3_
         {
             InitializeComponent();
             this.articulo = articulo;
+            Text = "Modificar Articulo";
         }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                PbArticulo.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                PbArticulo.Load("https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png");
+            }
+        }
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -69,7 +83,10 @@ namespace TP_WINFORM_PROGRAM3_
                 txtNombre.Text = articulo.Nombre;
                 txtDescripcion.Text = articulo.descripcion;
                 txtPrecio.Text= articulo.Precio.ToString();
+                txtUrlImagen.Text = articulo.IdImagenUrl.ImagenURL;
 
+                cargarImagen(articulo.IdImagenUrl.ImagenURL);
+               
             }
 
             RepositorioCategoria repoCategoria = new RepositorioCategoria();
