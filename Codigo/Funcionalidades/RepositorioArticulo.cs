@@ -160,5 +160,26 @@ namespace Funcionalidades
 
 
         }
+        public void EliminacionLogica(Articulo nuevoarticulo)
+        {
+            Conexion_Comandos Accesodatos = new Conexion_Comandos();
+            try
+            {
+
+                Accesodatos.setearConsulta("Update ARTICULOS set Precio= -1 where Id = @Id");
+                Accesodatos.setearParametros("@Id", nuevoarticulo.id);
+                Accesodatos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Accesodatos.cerrarConexion();
+            }
+        }
     }
 }

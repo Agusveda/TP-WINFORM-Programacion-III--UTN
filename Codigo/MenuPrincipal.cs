@@ -41,7 +41,8 @@ namespace TP_WINFORM_PROGRAM3_
 
 
                 RepositorioArticulo repoArticulo = new RepositorioArticulo();
-                ListaArticulos = repoArticulo.Listar(); // seteo lista
+                
+                ListaArticulos = repoArticulo.Listar().Where(Articulo=>Articulo.Precio >=0).ToList(); // seteo lista
                 dgvarticulos.DataSource = ListaArticulos; //agrego al dgv la lista para que se pueda visualizar
                 pbArticulo.Load(ListaArticulos[0].IdImagenUrl.ImagenURL);
             }
@@ -141,7 +142,7 @@ namespace TP_WINFORM_PROGRAM3_
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error, seleccione otra fila"); ;
+                MessageBox.Show("Error, seleccione otra fila");
             }
         }
         private void cargarImagen(string imagen)
@@ -165,6 +166,38 @@ namespace TP_WINFORM_PROGRAM3_
                 cargarImagen(seleccion.IdImagenUrl.ImagenURL);
             }
 
+        }
+
+        private void bBorrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RepositorioArticulo repoArt = new RepositorioArticulo();
+                if (dgvarticulos.CurrentRow != null)
+                {
+                    Articulo seleccion = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+                    MessageBoxButtons botones = MessageBoxButtons.YesNo;
+                    DialogResult resultado = MessageBox.Show("¿Está seguro que desea borrar el articulo?", "Borrar", botones);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        repoArt.EliminacionLogica(seleccion);
+                        MessageBox.Show("Borrado exitosamente...");
+                    }
+                }
+                
+            }
+
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al borrar");
+            }
+            finally
+            {
+                CargarListado();
+            }
+
+            
         }
     }
 }

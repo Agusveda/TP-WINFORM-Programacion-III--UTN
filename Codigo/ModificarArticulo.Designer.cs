@@ -140,7 +140,7 @@
             // 
             // PbArticulo
             // 
-            this.PbArticulo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PbArticulo.BackColor = System.Drawing.SystemColors.Control;
             this.PbArticulo.Location = new System.Drawing.Point(456, 117);
             this.PbArticulo.Name = "PbArticulo";
             this.PbArticulo.Size = new System.Drawing.Size(207, 178);

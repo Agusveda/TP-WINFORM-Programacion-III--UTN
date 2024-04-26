@@ -94,6 +94,7 @@
             // bBorrar
             // 
             this.bBorrar.BackColor = System.Drawing.Color.Transparent;
+            this.bBorrar.Cursor = System.Windows.Forms.Cursors.No;
             this.bBorrar.ForeColor = System.Drawing.Color.Red;
             this.bBorrar.Location = new System.Drawing.Point(667, 400);
             this.bBorrar.Name = "bBorrar";
@@ -101,6 +102,7 @@
             this.bBorrar.TabIndex = 13;
             this.bBorrar.Text = "Borrar";
             this.bBorrar.UseVisualStyleBackColor = false;
+            this.bBorrar.Click += new System.EventHandler(this.bBorrar_Click);
             // 
             // textFiltro
             // 
