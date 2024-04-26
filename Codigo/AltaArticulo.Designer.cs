@@ -52,7 +52,7 @@
             // lbCategoria
             // 
             this.lbCategoria.AutoSize = true;
-            this.lbCategoria.Location = new System.Drawing.Point(80, 262);
+            this.lbCategoria.Location = new System.Drawing.Point(46, 244);
             this.lbCategoria.Name = "lbCategoria";
             this.lbCategoria.Size = new System.Drawing.Size(55, 13);
             this.lbCategoria.TabIndex = 19;
@@ -61,7 +61,7 @@
             // lbMarca
             // 
             this.lbMarca.AutoSize = true;
-            this.lbMarca.Location = new System.Drawing.Point(80, 235);
+            this.lbMarca.Location = new System.Drawing.Point(46, 217);
             this.lbMarca.Name = "lbMarca";
             this.lbMarca.Size = new System.Drawing.Size(40, 13);
             this.lbMarca.TabIndex = 17;
@@ -70,7 +70,7 @@
             // lbDescripcion
             // 
             this.lbDescripcion.AutoSize = true;
-            this.lbDescripcion.Location = new System.Drawing.Point(80, 156);
+            this.lbDescripcion.Location = new System.Drawing.Point(46, 138);
             this.lbDescripcion.Name = "lbDescripcion";
             this.lbDescripcion.Size = new System.Drawing.Size(66, 13);
             this.lbDescripcion.TabIndex = 16;
@@ -78,14 +78,14 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(152, 153);
+            this.txtDescripcion.Location = new System.Drawing.Point(118, 135);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(137, 20);
             this.txtDescripcion.TabIndex = 15;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(152, 127);
+            this.txtNombre.Location = new System.Drawing.Point(118, 109);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(137, 20);
             this.txtNombre.TabIndex = 12;
@@ -93,7 +93,7 @@
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(80, 130);
+            this.lbNombre.Location = new System.Drawing.Point(46, 112);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.Size = new System.Drawing.Size(47, 13);
             this.lbNombre.TabIndex = 11;
@@ -102,7 +102,7 @@
             // PbArticulo
             // 
             this.PbArticulo.BackColor = System.Drawing.SystemColors.Control;
-            this.PbArticulo.Location = new System.Drawing.Point(352, 101);
+            this.PbArticulo.Location = new System.Drawing.Point(318, 83);
             this.PbArticulo.Name = "PbArticulo";
             this.PbArticulo.Size = new System.Drawing.Size(228, 178);
             this.PbArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,7 +112,7 @@
             // btnAceptar
             // 
             this.btnAceptar.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnAceptar.Location = new System.Drawing.Point(189, 356);
+            this.btnAceptar.Location = new System.Drawing.Point(155, 338);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 22;
@@ -122,7 +122,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(366, 356);
+            this.btnCancelar.Location = new System.Drawing.Point(332, 338);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 23;
@@ -133,7 +133,7 @@
             // lbPrecio
             // 
             this.lbPrecio.AutoSize = true;
-            this.lbPrecio.Location = new System.Drawing.Point(80, 182);
+            this.lbPrecio.Location = new System.Drawing.Point(46, 164);
             this.lbPrecio.Name = "lbPrecio";
             this.lbPrecio.Size = new System.Drawing.Size(40, 13);
             this.lbPrecio.TabIndex = 24;
@@ -141,7 +141,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(152, 179);
+            this.txtPrecio.Location = new System.Drawing.Point(118, 161);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(137, 20);
             this.txtPrecio.TabIndex = 25;
@@ -150,7 +150,7 @@
             // 
             this.CboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboMarca.FormattingEnabled = true;
-            this.CboMarca.Location = new System.Drawing.Point(152, 232);
+            this.CboMarca.Location = new System.Drawing.Point(118, 214);
             this.CboMarca.Name = "CboMarca";
             this.CboMarca.Size = new System.Drawing.Size(137, 21);
             this.CboMarca.TabIndex = 26;
@@ -159,14 +159,14 @@
             // 
             this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(152, 258);
+            this.cboCategoria.Location = new System.Drawing.Point(118, 240);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(137, 21);
             this.cboCategoria.TabIndex = 27;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(152, 101);
+            this.txtCodigo.Location = new System.Drawing.Point(118, 83);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(137, 20);
             this.txtCodigo.TabIndex = 29;
@@ -174,7 +174,7 @@
             // lbcodigo
             // 
             this.lbcodigo.AutoSize = true;
-            this.lbcodigo.Location = new System.Drawing.Point(80, 104);
+            this.lbcodigo.Location = new System.Drawing.Point(46, 86);
             this.lbcodigo.Name = "lbcodigo";
             this.lbcodigo.Size = new System.Drawing.Size(43, 13);
             this.lbcodigo.TabIndex = 28;
@@ -182,7 +182,7 @@
             // 
             // txtUrlImagen
             // 
-            this.txtUrlImagen.Location = new System.Drawing.Point(152, 206);
+            this.txtUrlImagen.Location = new System.Drawing.Point(118, 188);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(137, 20);
             this.txtUrlImagen.TabIndex = 31;
@@ -191,7 +191,7 @@
             // lbUrlImagen
             // 
             this.lbUrlImagen.AutoSize = true;
-            this.lbUrlImagen.Location = new System.Drawing.Point(80, 209);
+            this.lbUrlImagen.Location = new System.Drawing.Point(46, 191);
             this.lbUrlImagen.Name = "lbUrlImagen";
             this.lbUrlImagen.Size = new System.Drawing.Size(61, 13);
             this.lbUrlImagen.TabIndex = 30;
@@ -201,7 +201,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(264, 54);
+            this.label1.Location = new System.Drawing.Point(230, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 13);
             this.label1.TabIndex = 32;
@@ -212,7 +212,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(626, 450);
+            this.ClientSize = new System.Drawing.Size(598, 370);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUrlImagen);
             this.Controls.Add(this.lbUrlImagen);

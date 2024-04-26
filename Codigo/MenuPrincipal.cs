@@ -180,7 +180,7 @@ namespace TP_WINFORM_PROGRAM3_
                     DialogResult resultado = MessageBox.Show("¿Está seguro que desea borrar el articulo?", "Borrar", botones);
                     if (resultado == DialogResult.Yes)
                     {
-                        repoArt.EliminacionLogica(seleccion);
+                        repoArt.BajaLogica(seleccion);
                         MessageBox.Show("Borrado exitosamente...");
                     }
                 }
@@ -199,5 +199,7 @@ namespace TP_WINFORM_PROGRAM3_
 
             
         }
+
+        
     }
 }

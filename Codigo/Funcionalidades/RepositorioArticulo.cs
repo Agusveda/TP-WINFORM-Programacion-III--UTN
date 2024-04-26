@@ -160,7 +160,7 @@ namespace Funcionalidades
 
 
         }
-        public void EliminacionLogica(Articulo nuevoarticulo)
+        public void BajaLogica(Articulo nuevoarticulo)
         {
             Conexion_Comandos Accesodatos = new Conexion_Comandos();
             try
