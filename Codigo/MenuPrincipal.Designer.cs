@@ -39,6 +39,7 @@
             this.lbBusqueda = new System.Windows.Forms.Label();
             this.bDetalle = new System.Windows.Forms.Button();
             this.pbArticulo = new System.Windows.Forms.PictureBox();
+            this.btcerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
             this.SuspendLayout();
@@ -50,45 +51,60 @@
             this.dgvarticulos.AllowUserToDeleteRows = false;
             this.dgvarticulos.AllowUserToResizeColumns = false;
             this.dgvarticulos.AllowUserToResizeRows = false;
-            this.dgvarticulos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvarticulos.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvarticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvarticulos.Location = new System.Drawing.Point(12, 76);
+            this.dgvarticulos.Location = new System.Drawing.Point(18, 106);
+            this.dgvarticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvarticulos.Name = "dgvarticulos";
             this.dgvarticulos.ReadOnly = true;
+            this.dgvarticulos.RowHeadersWidth = 51;
             this.dgvarticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvarticulos.Size = new System.Drawing.Size(629, 297);
+            this.dgvarticulos.Size = new System.Drawing.Size(944, 412);
             this.dgvarticulos.TabIndex = 22;
             this.dgvarticulos.SelectionChanged += new System.EventHandler(this.dgvarticulos_SelectionChanged);
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(197, 393);
+            this.bAgregar.BackColor = System.Drawing.Color.PaleGreen;
+            this.bAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.bAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bAgregar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAgregar.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.bAgregar.Location = new System.Drawing.Point(18, 544);
+            this.bAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bAgregar.Name = "bAgregar";
-            this.bAgregar.Size = new System.Drawing.Size(75, 23);
+            this.bAgregar.Size = new System.Drawing.Size(263, 64);
             this.bAgregar.TabIndex = 11;
             this.bAgregar.Text = "Agregar";
-            this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.UseVisualStyleBackColor = false;
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(359, 393);
+            this.btnModificar.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModificar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(290, 544);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.Size = new System.Drawing.Size(251, 64);
             this.btnModificar.TabIndex = 12;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // bBorrar
             // 
-            this.bBorrar.BackColor = System.Drawing.Color.Transparent;
+            this.bBorrar.BackColor = System.Drawing.Color.LightCoral;
             this.bBorrar.Cursor = System.Windows.Forms.Cursors.No;
-            this.bBorrar.ForeColor = System.Drawing.Color.Red;
-            this.bBorrar.Location = new System.Drawing.Point(566, 393);
+            this.bBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bBorrar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBorrar.ForeColor = System.Drawing.Color.Black;
+            this.bBorrar.Location = new System.Drawing.Point(565, 546);
+            this.bBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bBorrar.Name = "bBorrar";
-            this.bBorrar.Size = new System.Drawing.Size(75, 23);
+            this.bBorrar.Size = new System.Drawing.Size(237, 63);
             this.bBorrar.TabIndex = 13;
             this.bBorrar.Text = "Borrar";
             this.bBorrar.UseVisualStyleBackColor = false;
@@ -96,65 +112,99 @@
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(113, 47);
+            this.txtFiltro.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtFiltro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFiltro.Location = new System.Drawing.Point(133, 63);
+            this.txtFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(222, 20);
+            this.txtFiltro.Size = new System.Drawing.Size(320, 26);
             this.txtFiltro.TabIndex = 17;
             // 
             // bQuitar
             // 
-            this.bQuitar.Location = new System.Drawing.Point(417, 47);
+            this.bQuitar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bQuitar.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bQuitar.Location = new System.Drawing.Point(550, 62);
+            this.bQuitar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bQuitar.Name = "bQuitar";
-            this.bQuitar.Size = new System.Drawing.Size(75, 20);
+            this.bQuitar.Size = new System.Drawing.Size(62, 29);
             this.bQuitar.TabIndex = 18;
-            this.bQuitar.Text = "Quitar";
-            this.bQuitar.UseVisualStyleBackColor = true;
+            this.bQuitar.Text = "Limpiar";
+            this.bQuitar.UseVisualStyleBackColor = false;
+            this.bQuitar.Click += new System.EventHandler(this.bQuitar_Click);
             // 
             // btAplicar
             // 
-            this.btAplicar.Location = new System.Drawing.Point(341, 40);
+            this.btAplicar.BackColor = System.Drawing.Color.PaleGreen;
+            this.btAplicar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btAplicar.Location = new System.Drawing.Point(465, 62);
+            this.btAplicar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btAplicar.Name = "btAplicar";
-            this.btAplicar.Size = new System.Drawing.Size(70, 27);
+            this.btAplicar.Size = new System.Drawing.Size(76, 30);
             this.btAplicar.TabIndex = 19;
             this.btAplicar.Text = "&Buscar";
-            this.btAplicar.UseVisualStyleBackColor = true;
+            this.btAplicar.UseVisualStyleBackColor = false;
             this.btAplicar.Click += new System.EventHandler(this.btAplicar_Click);
             // 
             // lbBusqueda
             // 
             this.lbBusqueda.AutoSize = true;
-            this.lbBusqueda.Location = new System.Drawing.Point(12, 50);
+            this.lbBusqueda.Location = new System.Drawing.Point(15, 65);
+            this.lbBusqueda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbBusqueda.Name = "lbBusqueda";
-            this.lbBusqueda.Size = new System.Drawing.Size(95, 13);
+            this.lbBusqueda.Size = new System.Drawing.Size(107, 18);
             this.lbBusqueda.TabIndex = 20;
-            this.lbBusqueda.Text = "Busqueda por filtro";
+            this.lbBusqueda.Text = "Filtro Rapido:";
             // 
             // bDetalle
             // 
-            this.bDetalle.Location = new System.Drawing.Point(278, 393);
+            this.bDetalle.BackColor = System.Drawing.Color.PaleGreen;
+            this.bDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bDetalle.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bDetalle.Location = new System.Drawing.Point(903, 546);
+            this.bDetalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bDetalle.Name = "bDetalle";
-            this.bDetalle.Size = new System.Drawing.Size(75, 23);
+            this.bDetalle.Size = new System.Drawing.Size(58, 64);
             this.bDetalle.TabIndex = 25;
             this.bDetalle.Text = "Ver detalle";
-            this.bDetalle.UseVisualStyleBackColor = true;
+            this.bDetalle.UseVisualStyleBackColor = false;
             this.bDetalle.Click += new System.EventHandler(this.bDetalle_Click);
             // 
             // pbArticulo
             // 
-            this.pbArticulo.Location = new System.Drawing.Point(665, 76);
+            this.pbArticulo.Location = new System.Drawing.Point(998, 106);
+            this.pbArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbArticulo.Name = "pbArticulo";
-            this.pbArticulo.Size = new System.Drawing.Size(284, 297);
+            this.pbArticulo.Size = new System.Drawing.Size(426, 412);
             this.pbArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbArticulo.TabIndex = 26;
             this.pbArticulo.TabStop = false;
             // 
+            // btcerrar
+            // 
+            this.btcerrar.BackColor = System.Drawing.Color.LightCoral;
+            this.btcerrar.Cursor = System.Windows.Forms.Cursors.No;
+            this.btcerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btcerrar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btcerrar.ForeColor = System.Drawing.Color.Black;
+            this.btcerrar.Location = new System.Drawing.Point(1187, 544);
+            this.btcerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btcerrar.Name = "btcerrar";
+            this.btcerrar.Size = new System.Drawing.Size(237, 63);
+            this.btcerrar.TabIndex = 27;
+            this.btcerrar.Text = "&Cerrar";
+            this.btcerrar.UseVisualStyleBackColor = false;
+            this.btcerrar.Click += new System.EventHandler(this.btcerrar_Click);
+            // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1062, 450);
+            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.ClientSize = new System.Drawing.Size(1593, 623);
+            this.Controls.Add(this.btcerrar);
             this.Controls.Add(this.pbArticulo);
             this.Controls.Add(this.bDetalle);
             this.Controls.Add(this.dgvarticulos);
@@ -165,7 +215,11 @@
             this.Controls.Add(this.bBorrar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.bAgregar);
+            this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1611, 670);
+            this.MinimumSize = new System.Drawing.Size(1611, 670);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENÚ PRINCIPAL";
@@ -189,6 +243,7 @@
         private System.Windows.Forms.Label lbBusqueda;
         private System.Windows.Forms.Button bDetalle;
         private System.Windows.Forms.PictureBox pbArticulo;
+        private System.Windows.Forms.Button btcerrar;
     }
 }
 

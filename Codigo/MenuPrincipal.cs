@@ -199,7 +199,24 @@ namespace TP_WINFORM_PROGRAM3_
 
             
         }
+        private void btAplicar_Click(object sender, EventArgs e)
+        {
+            List<Articulo> ListaFiltrada;
+            String Filtro = txtFiltro.Text;
+            ListaFiltrada = ListaArticulos.FindAll(x => x.Codigo.ToUpper().Contains(Filtro.ToUpper()) || x.idCategoria.Descripcion.ToUpper().Contains(Filtro.ToUpper()));
 
-        
+            dgvarticulos.DataSource = null;
+            dgvarticulos.DataSource = ListaFiltrada;
+        }
+
+        private void bQuitar_Click(object sender, EventArgs e)
+        {
+            CargarListado();
+        }
+
+        private void btcerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
