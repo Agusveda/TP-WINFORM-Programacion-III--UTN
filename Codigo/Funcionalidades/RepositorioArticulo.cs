@@ -62,7 +62,6 @@ namespace Funcionalidades
                     {
                         aux.IdImagenUrl.id = 0;
                         aux.IdImagenUrl.ImagenURL = "";
-
                     }
                     else
                     {

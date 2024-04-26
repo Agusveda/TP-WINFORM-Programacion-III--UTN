@@ -77,7 +77,14 @@ namespace TP_WINFORM_PROGRAM3_
             CboMarca.ValueMember = "ID";
             CboMarca.DisplayMember = "Descripcion";
 
-            if(articulo != null)
+
+            RepositorioCategoria repoCategoria = new RepositorioCategoria();
+
+            cboCategoria.DataSource = repoCategoria.Listar(); // seteo desplegable categoria
+            cboCategoria.ValueMember = "ID";
+            cboCategoria.DisplayMember = "Descripcion";
+
+            if (articulo != null)
             {
                 txtCodigo.Text = articulo.Codigo;
                 txtNombre.Text = articulo.Nombre;
@@ -86,15 +93,14 @@ namespace TP_WINFORM_PROGRAM3_
                 txtUrlImagen.Text = articulo.IdImagenUrl.ImagenURL;
 
                 cargarImagen(articulo.IdImagenUrl.ImagenURL);
-               
+
+                CboMarca.SelectedValue = articulo.idMarca.Id;
+                cboCategoria.SelectedValue = articulo.idCategoria.Id;
+
+
             }
 
-            RepositorioCategoria repoCategoria = new RepositorioCategoria();
-
-            cboCategoria.DataSource = repoCategoria.Listar(); // seteo desplegable categoria
-            cboCategoria.ValueMember = "ID";
-            cboCategoria.DisplayMember = "Descripcion";
-
+            
         }
 
         //private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
