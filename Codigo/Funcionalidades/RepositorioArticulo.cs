@@ -181,5 +181,106 @@ namespace Funcionalidades
                 Accesodatos.cerrarConexion();
             }
         }
+
+        public List<Articulo> FiltrarArticulos(string campo, string criterio, string filtro)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            Conexion_Comandos datos = new Conexion_Comandos();
+
+            try
+            {
+                string consulta = "select  a.Id, A.Codigo, A.Nombre,A.Descripcion,A.Precio,m.Id as IdMarca ,M.Descripcion AS DescripcionMarca, c.Id as Idcategoria,C.Descripcion AS DescripcionCate,i.Id as idimg,I.ImagenUrl from ARTICULOS A left join MARCAS M on M.Id = A.IdMarca left join CATEGORIAS C on C.Id = A.IdCategoria left join IMAGENES I on I.IdArticulo = A.Id where Precio > 0 and ";
+                if (campo == "Precio.")
+                {
+                    switch (criterio)
+                    {
+                        case "Mayor a..":
+                            consulta += "Precio > @Precio";
+                            break;
+                        case "Menor a..":
+                            consulta += "Precio < @Precio";
+                            break;
+                        default:
+                            consulta += "Precio = @Precio";
+                            break;
+                    }
+                    datos.setearParametros("@Precio", Convert.ToDecimal(filtro));
+                }
+                else if (campo == "Nombre.")
+                {
+                    switch (criterio)
+                    {
+                        case "comienza con..":
+                            consulta += "Nombre like @Filtro + '%'";
+                            break;
+                        case "Termina con..":
+                            consulta += "Nombre like '%' + @Filtro";
+                            break;
+                        default:
+                            consulta += "Nombre like '%' + @Filtro + '%'";
+                            break;
+                    }
+                    datos.setearParametros("@Filtro", filtro);
+                }
+
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+
+                    aux.id = (int)datos.Lector["id"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.descripcion = (string)datos.Lector["Descripcion"];
+
+                    // para poder cargar IdMarca
+
+                    aux.idMarca = new Marca();
+                    aux.idMarca.Id = (int)datos.Lector["IdMarca"];
+                    aux.idMarca.Descripcion = (string)datos.Lector["DescripcionMarca"];
+
+                    //Creamos un aux categoria para poder cargar las columnas
+
+                    aux.idCategoria = new Categoria();
+                    if (datos.Lector["DescripcionCate"] is DBNull && datos.Lector["Idcategoria"] is DBNull)
+                    {
+                        aux.idCategoria.Descripcion = "Sin descripcion";
+                        aux.idCategoria.Id = 0;
+                    }
+                    else
+                    {
+
+                        aux.idCategoria.Id = (int)datos.Lector["Idcategoria"];
+                        aux.idCategoria.Descripcion = (string)datos.Lector["DescripcionCate"];
+                    }
+
+
+                    // me aseguro que no sea nulo
+                    aux.IdImagenUrl = new Imagenes();
+                    if (datos.Lector["ImagenURL"] is DBNull && datos.Lector["IdImg"] is DBNull)
+                    {
+                        aux.IdImagenUrl.id = 0;
+                        aux.IdImagenUrl.ImagenURL = "";
+                    }
+                    else
+                    {
+
+                        aux.IdImagenUrl.id = (int)datos.Lector["IdImg"];
+                        aux.IdImagenUrl.ImagenURL = (string)datos.Lector["ImagenUrl"];
+                    }
+
+                    
+
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    lista.Add(aux);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -16,72 +16,23 @@ namespace TP_WINFORM_PROGRAM3_
 {
     public partial class MenuPrincipal : Form
     {
-        private List<Articulo> ListaArticulos;
+        private List<Articulo> ListaArticulos; 
 
         public MenuPrincipal()
         {
             InitializeComponent();
 
         }
-
-
-        private void MenuPrincipal_Load(object sender, EventArgs e)
-        {  
-            
-            CargarListado();
-
-        }
-
-        private void CargarListado()
-        {
-
-
-            try
-            {
-
-
-                RepositorioArticulo repoArticulo = new RepositorioArticulo();
-                
-                ListaArticulos = repoArticulo.Listar().Where(Articulo=>Articulo.Precio >=0).ToList(); // seteo lista
-                dgvarticulos.DataSource = ListaArticulos; //agrego al dgv la lista para que se pueda visualizar
-                pbArticulo.Load(ListaArticulos[0].IdImagenUrl.ImagenURL);
-            }
-
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
-
-        }
-
-
-
-
-
-
-        private void ocultarColumnas()
-        {
-            dgvarticulos.Columns["IdImagen"].Visible = false;
-            dgvarticulos.Columns["id"].Visible = false;
-        } // oculto columnas del dgv
-
-        
-        
-       
-
-        private void bAgregar_Click(object sender, EventArgs e)
+        //
+        // botones 
+        //
+        private void bAgregar_Click(object sender, EventArgs e) // boton de Alta..
         {
             frmAltaArticulo altaArticulo = new frmAltaArticulo();
             altaArticulo.ShowDialog();
             CargarListado();
         }
-
-       
-
-        
-
-        private void bDetalle_Click(object sender, EventArgs e)
+        private void bDetalle_Click(object sender, EventArgs e) // Boton de Ver detalle..
         {
             try
             {
@@ -108,8 +59,7 @@ namespace TP_WINFORM_PROGRAM3_
                 MessageBox.Show("Error, seleccione otra fila"); ;
             }
         }
-
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e) // Boton de modificar..
         {
             try
             {
@@ -145,30 +95,7 @@ namespace TP_WINFORM_PROGRAM3_
                 MessageBox.Show("Error, seleccione otra fila");
             }
         }
-        private void cargarImagen(string imagen)
-        {
-            try
-            {
-                pbArticulo.Load(imagen);
-            }
-            catch (Exception)
-            {
-
-                pbArticulo.Load("https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png");
-
-            }
-        }
-        private void dgvarticulos_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvarticulos.CurrentRow != null)
-            {
-                Articulo seleccion = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
-                cargarImagen(seleccion.IdImagenUrl.ImagenURL);
-            }
-
-        }
-
-        private void bBorrar_Click(object sender, EventArgs e)
+        private void btnBorrar_Click(object sender, EventArgs e) // Boton de BAJA (Logica)..
         {
             try
             {
@@ -199,20 +126,140 @@ namespace TP_WINFORM_PROGRAM3_
 
             
         }
-        
-
-        private void bQuitar_Click(object sender, EventArgs e)
+        private void btnLimpiarFiltro_Click(object sender, EventArgs e) //boton de limpiar Filtro
         {
+            txtFiltro.Text = null;
             CargarListado();
         }
-
-        private void btcerrar_Click(object sender, EventArgs e)
+        private void btncerrar_Click(object sender, EventArgs e) // Boton de cerrar programa
         {
             Close();
         }
+        private void btnBuscar_Click(object sender, EventArgs e) // Boton de buscar en Filtro Avanzado..
+        {
+            RepositorioArticulo repoarti = new RepositorioArticulo();
+            try
+            {
 
+                if (validacionFiltros())
+                    return;
+                string campo = cbCampo.SelectedItem.ToString();
+                string criterio = cbCriterio.SelectedItem.ToString();
+                string filtro = txtFiltroAvanzado.Text;
+                dgvarticulos.DataSource = repoarti.FiltrarArticulos(campo, criterio, filtro);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        //
+        // FUNCIONES
+        //
+        private void cargarImagen(string imagen) // carga imagen o coloca una por default..
+        {
+            try
+            {
+                pbArticulo.Load(imagen);
+            }
+            catch (Exception)
+            {
+
+                pbArticulo.Load("https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png");
+
+            }
+        }
+        private bool validacionFiltros() // Valido que los filtros esten bien y no se cargue nada mal..
+        {
+            if (cbCampo.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("Por favor, seleccione el campo para fitlrar... ");
+                return true;
+            }
+            if (cbCriterio.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, seleccione el criterio para fitlrar... ");
+                return true;
+            }
+            if (cbCampo.SelectedItem.ToString() == "Precio.")
+            {
+                if (!(soloNumeros(txtFiltroAvanzado.Text)))
+                {
+
+                    MessageBox.Show("Solo numeros para filtrar en un campo numerico");
+                    return true;
+                }
+
+            }
+
+            return false;
+
+        }
+        private bool soloNumeros(string cadena) // Obliga a ingresar numeros
+        {
+            foreach (char character in cadena)
+            {
+                if (!(char.IsNumber(character)))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private void CargarListado()
+        {
+
+
+            try
+            {
+
+
+                RepositorioArticulo repoArticulo = new RepositorioArticulo();
+                
+                ListaArticulos = repoArticulo.Listar().Where(Articulo=>Articulo.Precio >=0).ToList(); // seteo lista
+                dgvarticulos.DataSource = ListaArticulos; //agrego al dgv la lista para que se pueda visualizar
+                pbArticulo.Load(ListaArticulos[0].IdImagenUrl.ImagenURL);
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+        } // carga el listado de articulos
+        private void ocultarColumnas()
+        {
+            dgvarticulos.Columns["IdImagen"].Visible = false;
+            dgvarticulos.Columns["id"].Visible = false;
+        } // oculto columnas del dgv
         
-        private void MenuPrincipal_TextChanged(object sender, EventArgs e)
+        //
+        //EVENTOS
+        //
+        private void MenuPrincipal_Load(object sender, EventArgs e) // Load del menu
+        {  
+            
+            CargarListado();
+            cbCampo.Items.Add("Precio.");
+            cbCampo.Items.Add("Nombre.");
+        }
+
+        private void dgvarticulos_SelectionChanged(object sender, EventArgs e) // funcion al momento de cambiar de fila en el DataGridView
+        {
+            if (dgvarticulos.CurrentRow != null)
+            {
+                Articulo seleccion = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccion.IdImagenUrl.ImagenURL);
+            }
+
+        }
+        private void TxtFiltro_TextChanged(object sender, EventArgs e) // Funcion al momento de ingresar/borrar/colocar letras en el filtro rapido
         {
 
             List<Articulo> ListaFiltrada;
@@ -221,6 +268,31 @@ namespace TP_WINFORM_PROGRAM3_
 
             dgvarticulos.DataSource = null;
             dgvarticulos.DataSource = ListaFiltrada;
+        }
+        private void cbcampo_SelectedIndexChanged(object sender, EventArgs e) //funcion al momento de seleccionar el desplegable de campo
+        {
+            
+                string opcion = cbCampo.SelectedItem.ToString();
+
+                if (opcion == "Precio.")
+                {
+                    cbCriterio.Items.Clear(); // aparecia un error que sumaba los items, con el clear limpio cada vez que se selecciona el campo
+                cbCriterio.Items.Add("Mayor a..");
+                cbCriterio.Items.Add("Menor a..");
+                cbCriterio.Items.Add("Igual a..");
+
+
+                }
+                else if (opcion == "Nombre.")
+                {
+                cbCriterio.Items.Clear();
+                    cbCriterio.Items.Add("comienza con..");
+                    cbCriterio.Items.Add("Termina con..");
+                    cbCriterio.Items.Add("Contiene..");
+
+                }
+
+            
         }
     }
 }
