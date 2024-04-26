@@ -68,3 +68,4 @@ E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP_WINFORM_PROGRAM3_.fr
 C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP_WINFORM_PROGRAM3_.frmAltaArticulo.resources
 E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP_WINFORM_PROGRAM3_.Detalle.resources
 D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP_WINFORM_PROGRAM3_.Detalle.resources
+C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP_WINFORM_PROGRAM3_.Detalle.resources

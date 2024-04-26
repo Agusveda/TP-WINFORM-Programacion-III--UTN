@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
@@ -29,6 +30,39 @@ namespace TP_WINFORM_PROGRAM3_
             Text = "Modificar Articulo";
         }
 
+        private void frmAltaArticulo_Load(object sender, EventArgs e)
+        {
+            RepositorioMarca repoMarca = new RepositorioMarca();
+            
+            CboMarca.DataSource = repoMarca.Listar(); // seteo desplegable marca
+            CboMarca.ValueMember = "ID";
+            CboMarca.DisplayMember = "Descripcion";
+
+
+            RepositorioCategoria repoCategoria = new RepositorioCategoria();
+
+            cboCategoria.DataSource = repoCategoria.Listar(); // seteo desplegable categoria
+            cboCategoria.ValueMember = "ID";
+            cboCategoria.DisplayMember = "Descripcion";
+
+            if (articulo != null) // si es nulo significa que es un nuevo articulo
+            {
+                txtCodigo.Text = articulo.Codigo;
+                txtNombre.Text = articulo.Nombre;
+                txtDescripcion.Text = articulo.descripcion;
+                txtPrecio.Text= articulo.Precio.ToString();
+                txtUrlImagen.Text = articulo.IdImagenUrl.ImagenURL;
+
+                cargarImagen(articulo.IdImagenUrl.ImagenURL);
+
+                CboMarca.SelectedValue = articulo.idMarca.Id;
+                cboCategoria.SelectedValue = articulo.idCategoria.Id;
+
+
+            }
+
+            
+        }
         private void cargarImagen(string imagen)
         {
             try
@@ -50,6 +84,7 @@ namespace TP_WINFORM_PROGRAM3_
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             RepositorioArticulo repoart = new RepositorioArticulo();
+            RepositorioImagen repoImg = new RepositorioImagen();    
            try 
             {
             Articulo auxArt = new Articulo();
@@ -59,48 +94,38 @@ namespace TP_WINFORM_PROGRAM3_
                 auxArt.idCategoria= (Categoria)cboCategoria.SelectedItem;
                 auxArt.idMarca = (Marca)CboMarca.SelectedItem;
                 auxArt.Precio = decimal.Parse(txtPrecio.Text);
-
                 repoart.Agregar(auxArt);
-                MessageBox.Show("agregado exitosamente");
+                            
+                
+                Imagenes auxImg = new Imagenes();
+                
+                auxImg.idArticulo = BuscarID(auxArt.Codigo);
+                auxImg.ImagenURL = txtUrlImagen.Text;
+                repoImg.Agregar(auxImg);
+                
+                MessageBox.Show("agregado exitosamente...");
             } 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+
+            finally { Close(); }
         }
 
-        private void frmAltaArticulo_Load(object sender, EventArgs e)
+        public int BuscarID(string codigo)
         {
-            RepositorioMarca repoMarca = new RepositorioMarca();
-            
-            CboMarca.DataSource = repoMarca.Listar(); // seteo desplegable marca
-            CboMarca.ValueMember = "ID";
-            CboMarca.DisplayMember = "Descripcion";
-
-
-            RepositorioCategoria repoCategoria = new RepositorioCategoria();
-
-            cboCategoria.DataSource = repoCategoria.Listar(); // seteo desplegable categoria
-            cboCategoria.ValueMember = "ID";
-            cboCategoria.DisplayMember = "Descripcion";
-
-            if (articulo != null)
+            int id=0;
+            Conexion_Comandos AccesoDatos = new Conexion_Comandos();
+            AccesoDatos.setearConsulta("select id from articulos where codigo = @codigo");
+            AccesoDatos.setearParametros("@codigo", codigo);
+            AccesoDatos.ejecutarLectura();
+            while (AccesoDatos.Lector.Read())
             {
-                txtCodigo.Text = articulo.Codigo;
-                txtNombre.Text = articulo.Nombre;
-                txtDescripcion.Text = articulo.descripcion;
-                txtPrecio.Text= articulo.Precio.ToString();
-                txtUrlImagen.Text = articulo.IdImagenUrl.ImagenURL;
-
-                cargarImagen(articulo.IdImagenUrl.ImagenURL);
-
-                CboMarca.SelectedValue = articulo.idMarca.Id;
-                cboCategoria.SelectedValue = articulo.idCategoria.Id;
-
-
+                id = (int)AccesoDatos.Lector["Id"];
+            return id;
             }
-
-            
+            return id;
         }
 
         //private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)

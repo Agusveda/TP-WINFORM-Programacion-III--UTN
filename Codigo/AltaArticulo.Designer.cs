@@ -217,6 +217,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lbNombre);
             this.Name = "frmAltaArticulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaArticulo";
             this.Load += new System.EventHandler(this.frmAltaArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbArticulo)).EndInit();

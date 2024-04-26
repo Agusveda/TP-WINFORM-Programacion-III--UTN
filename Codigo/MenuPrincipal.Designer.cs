@@ -39,13 +39,15 @@
             this.bAplicar = new System.Windows.Forms.Button();
             this.lbBusqueda = new System.Windows.Forms.Label();
             this.bDetalle = new System.Windows.Forms.Button();
+            this.pbArticulo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 84);
+            this.label1.Location = new System.Drawing.Point(9, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 21;
@@ -61,16 +63,17 @@
             this.dgvarticulos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvarticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvarticulos.Location = new System.Drawing.Point(137, 84);
+            this.dgvarticulos.Location = new System.Drawing.Point(113, 83);
             this.dgvarticulos.Name = "dgvarticulos";
             this.dgvarticulos.ReadOnly = true;
             this.dgvarticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvarticulos.Size = new System.Drawing.Size(629, 297);
             this.dgvarticulos.TabIndex = 22;
+            this.dgvarticulos.SelectionChanged += new System.EventHandler(this.dgvarticulos_SelectionChanged);
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(330, 401);
+            this.bAgregar.Location = new System.Drawing.Point(306, 400);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(75, 23);
             this.bAgregar.TabIndex = 11;
@@ -80,7 +83,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(492, 401);
+            this.btnModificar.Location = new System.Drawing.Point(468, 400);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 12;
@@ -92,7 +95,7 @@
             // 
             this.bBorrar.BackColor = System.Drawing.Color.Transparent;
             this.bBorrar.ForeColor = System.Drawing.Color.Red;
-            this.bBorrar.Location = new System.Drawing.Point(691, 401);
+            this.bBorrar.Location = new System.Drawing.Point(667, 400);
             this.bBorrar.Name = "bBorrar";
             this.bBorrar.Size = new System.Drawing.Size(75, 23);
             this.bBorrar.TabIndex = 13;
@@ -101,14 +104,14 @@
             // 
             // textFiltro
             // 
-            this.textFiltro.Location = new System.Drawing.Point(307, 53);
+            this.textFiltro.Location = new System.Drawing.Point(283, 52);
             this.textFiltro.Name = "textFiltro";
             this.textFiltro.Size = new System.Drawing.Size(222, 20);
             this.textFiltro.TabIndex = 17;
             // 
             // bQuitar
             // 
-            this.bQuitar.Location = new System.Drawing.Point(611, 53);
+            this.bQuitar.Location = new System.Drawing.Point(587, 52);
             this.bQuitar.Name = "bQuitar";
             this.bQuitar.Size = new System.Drawing.Size(75, 20);
             this.bQuitar.TabIndex = 18;
@@ -117,7 +120,7 @@
             // 
             // bAplicar
             // 
-            this.bAplicar.Location = new System.Drawing.Point(535, 53);
+            this.bAplicar.Location = new System.Drawing.Point(511, 52);
             this.bAplicar.Name = "bAplicar";
             this.bAplicar.Size = new System.Drawing.Size(70, 20);
             this.bAplicar.TabIndex = 19;
@@ -127,7 +130,7 @@
             // lbBusqueda
             // 
             this.lbBusqueda.AutoSize = true;
-            this.lbBusqueda.Location = new System.Drawing.Point(206, 56);
+            this.lbBusqueda.Location = new System.Drawing.Point(182, 55);
             this.lbBusqueda.Name = "lbBusqueda";
             this.lbBusqueda.Size = new System.Drawing.Size(95, 13);
             this.lbBusqueda.TabIndex = 20;
@@ -135,7 +138,7 @@
             // 
             // bDetalle
             // 
-            this.bDetalle.Location = new System.Drawing.Point(411, 401);
+            this.bDetalle.Location = new System.Drawing.Point(387, 400);
             this.bDetalle.Name = "bDetalle";
             this.bDetalle.Size = new System.Drawing.Size(75, 23);
             this.bDetalle.TabIndex = 25;
@@ -143,13 +146,23 @@
             this.bDetalle.UseVisualStyleBackColor = true;
             this.bDetalle.Click += new System.EventHandler(this.bDetalle_Click);
             // 
+            // pbArticulo
+            // 
+            this.pbArticulo.Location = new System.Drawing.Point(775, 89);
+            this.pbArticulo.Name = "pbArticulo";
+            this.pbArticulo.Size = new System.Drawing.Size(278, 290);
+            this.pbArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbArticulo.TabIndex = 26;
+            this.pbArticulo.TabStop = false;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(867, 450);
+            this.ClientSize = new System.Drawing.Size(1062, 450);
+            this.Controls.Add(this.pbArticulo);
             this.Controls.Add(this.bDetalle);
             this.Controls.Add(this.dgvarticulos);
             this.Controls.Add(this.label1);
@@ -167,6 +180,7 @@
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,6 +197,7 @@
         private System.Windows.Forms.Button bAplicar;
         private System.Windows.Forms.Label lbBusqueda;
         private System.Windows.Forms.Button bDetalle;
+        private System.Windows.Forms.PictureBox pbArticulo;
     }
 }
 

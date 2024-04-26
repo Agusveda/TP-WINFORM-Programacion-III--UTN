@@ -107,6 +107,7 @@ namespace Funcionalidades
                 Accesodatos.setearParametros("@IdCategoria", nuevoarticulo.idCategoria.Id);
                 Accesodatos.setearParametros("@Precio", nuevoarticulo.Precio);
                 Accesodatos.ejecutarAccion();
+              
             }
             catch (Exception ex)
             {
@@ -116,8 +117,10 @@ namespace Funcionalidades
             finally
             {
                 Accesodatos.cerrarConexion();
-            }
 
+                
+            }
+            
 
 
         }

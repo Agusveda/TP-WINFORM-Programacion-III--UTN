@@ -34,7 +34,7 @@ namespace TP_WINFORM_PROGRAM3_
 
         private void CargarListado()
         {
-            
+
 
             try
             {
@@ -43,7 +43,7 @@ namespace TP_WINFORM_PROGRAM3_
                 RepositorioArticulo repoArticulo = new RepositorioArticulo();
                 ListaArticulos = repoArticulo.Listar(); // seteo lista
                 dgvarticulos.DataSource = ListaArticulos; //agrego al dgv la lista para que se pueda visualizar
-                
+                pbArticulo.Load(ListaArticulos[0].IdImagenUrl.ImagenURL);
             }
 
             catch (Exception ex)
@@ -55,7 +55,6 @@ namespace TP_WINFORM_PROGRAM3_
         }
 
 
-        
 
 
 
@@ -74,7 +73,7 @@ namespace TP_WINFORM_PROGRAM3_
         {
             frmAltaArticulo altaArticulo = new frmAltaArticulo();
             altaArticulo.ShowDialog();
-            
+            CargarListado();
         }
 
        
@@ -117,6 +116,28 @@ namespace TP_WINFORM_PROGRAM3_
             frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
             modificar.ShowDialog();
             CargarListado();
+        }
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbArticulo.Load(imagen);
+            }
+            catch (Exception)
+            {
+
+                pbArticulo.Load("https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png");
+
+            }
+        }
+        private void dgvarticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvarticulos.CurrentRow != null)
+            {
+                Articulo seleccion = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccion.IdImagenUrl.ImagenURL);
+            }
+
         }
     }
 }
