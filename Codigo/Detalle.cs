@@ -43,20 +43,13 @@ namespace TP_WINFORM_PROGRAM3_
            
         }
 
-        private void Detalle_Load(object sender, EventArgs e)
-        {
-            
-          
-        }
-
-        private void Detalle_Load_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        
     }
 }

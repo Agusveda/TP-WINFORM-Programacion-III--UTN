@@ -27,7 +27,7 @@ namespace TP_WINFORM_PROGRAM3_
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {  
-
+            
             CargarListado();
 
         }
@@ -61,7 +61,7 @@ namespace TP_WINFORM_PROGRAM3_
 
         private void ocultarColumnas()
         {
-            dgvarticulos.Columns["ImagenUrl"].Visible = false;
+            dgvarticulos.Columns["IdImagen"].Visible = false;
             dgvarticulos.Columns["id"].Visible = false;
         } // oculto columnas del dgv
 
@@ -110,12 +110,39 @@ namespace TP_WINFORM_PROGRAM3_
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Articulo seleccionado;
-            seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
-
-            frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
-            modificar.ShowDialog();
-            CargarListado();
+            try
+            {
+                if (dgvarticulos.SelectedRows.Count > 0)
+                {
+                    Articulo aux = new Articulo();
+                    aux.id= (int)dgvarticulos.SelectedRows[0].Cells[0].Value;
+                    aux.Codigo = dgvarticulos.SelectedRows[0].Cells[1].Value.ToString();
+                    aux.Nombre = dgvarticulos.SelectedRows[0].Cells[2].Value.ToString();
+                    aux.descripcion = dgvarticulos.SelectedRows[0].Cells[3].Value.ToString();
+                    aux.idMarca= (Marca)dgvarticulos.SelectedRows[0].Cells[4].Value;
+                    aux.idCategoria = (Categoria)dgvarticulos.SelectedRows[0].Cells[5].Value;
+                    aux.Precio = (decimal)dgvarticulos.SelectedRows[0].Cells[6].Value;
+                    Articulo seleccion = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+                    if (seleccion.IdImagenUrl != null)
+                    {
+                        aux.IdImagenUrl = (Imagenes)seleccion.IdImagenUrl;
+                    }
+                    else
+                    {
+                         aux.IdImagenUrl.ImagenURL = "https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png"; }
+                    ModificarArticulo frmModificar = new ModificarArticulo(aux);
+                    frmModificar.ShowDialog();
+                    CargarListado();
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione una fila antes de ver el detalle.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error, seleccione otra fila"); ;
+            }
         }
         private void cargarImagen(string imagen)
         {

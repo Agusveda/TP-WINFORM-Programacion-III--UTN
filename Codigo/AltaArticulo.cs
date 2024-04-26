@@ -23,12 +23,7 @@ namespace TP_WINFORM_PROGRAM3_
             InitializeComponent();
         }
 
-        public frmAltaArticulo(Articulo articulo)
-        {
-            InitializeComponent();
-            this.articulo = articulo;
-            Text = "Modificar Articulo";
-        }
+        
 
         private void frmAltaArticulo_Load(object sender, EventArgs e)
         {
@@ -87,7 +82,7 @@ namespace TP_WINFORM_PROGRAM3_
             RepositorioImagen repoImg = new RepositorioImagen();    
            try 
             {
-            Articulo auxArt = new Articulo();
+                Articulo auxArt = new Articulo();
                 auxArt.Codigo = txtCodigo.Text;
                 auxArt.Nombre = txtNombre.Text;
                 auxArt.descripcion = txtDescripcion.Text;
@@ -126,6 +121,12 @@ namespace TP_WINFORM_PROGRAM3_
             return id;
             }
             return id;
+        }
+
+        private void txtUrlImagen_TextChanged(object sender, EventArgs e)
+        {
+            cargarImagen(txtUrlImagen.Text);
+
         }
 
         //private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)

@@ -60,7 +60,7 @@
             this.dgvarticulos.AllowUserToDeleteRows = false;
             this.dgvarticulos.AllowUserToResizeColumns = false;
             this.dgvarticulos.AllowUserToResizeRows = false;
-            this.dgvarticulos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvarticulos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvarticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvarticulos.Location = new System.Drawing.Point(113, 83);
@@ -73,7 +73,7 @@
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(306, 400);
+            this.bAgregar.Location = new System.Drawing.Point(298, 400);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(75, 23);
             this.bAgregar.TabIndex = 11;
@@ -83,7 +83,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(468, 400);
+            this.btnModificar.Location = new System.Drawing.Point(460, 400);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 12;
@@ -104,14 +104,14 @@
             // 
             // textFiltro
             // 
-            this.textFiltro.Location = new System.Drawing.Point(283, 52);
+            this.textFiltro.Location = new System.Drawing.Point(289, 57);
             this.textFiltro.Name = "textFiltro";
             this.textFiltro.Size = new System.Drawing.Size(222, 20);
             this.textFiltro.TabIndex = 17;
             // 
             // bQuitar
             // 
-            this.bQuitar.Location = new System.Drawing.Point(587, 52);
+            this.bQuitar.Location = new System.Drawing.Point(593, 57);
             this.bQuitar.Name = "bQuitar";
             this.bQuitar.Size = new System.Drawing.Size(75, 20);
             this.bQuitar.TabIndex = 18;
@@ -120,7 +120,7 @@
             // 
             // bAplicar
             // 
-            this.bAplicar.Location = new System.Drawing.Point(511, 52);
+            this.bAplicar.Location = new System.Drawing.Point(517, 57);
             this.bAplicar.Name = "bAplicar";
             this.bAplicar.Size = new System.Drawing.Size(70, 20);
             this.bAplicar.TabIndex = 19;
@@ -130,7 +130,7 @@
             // lbBusqueda
             // 
             this.lbBusqueda.AutoSize = true;
-            this.lbBusqueda.Location = new System.Drawing.Point(182, 55);
+            this.lbBusqueda.Location = new System.Drawing.Point(188, 60);
             this.lbBusqueda.Name = "lbBusqueda";
             this.lbBusqueda.Size = new System.Drawing.Size(95, 13);
             this.lbBusqueda.TabIndex = 20;
@@ -138,7 +138,7 @@
             // 
             // bDetalle
             // 
-            this.bDetalle.Location = new System.Drawing.Point(387, 400);
+            this.bDetalle.Location = new System.Drawing.Point(379, 400);
             this.bDetalle.Name = "bDetalle";
             this.bDetalle.Size = new System.Drawing.Size(75, 23);
             this.bDetalle.TabIndex = 25;
@@ -148,9 +148,9 @@
             // 
             // pbArticulo
             // 
-            this.pbArticulo.Location = new System.Drawing.Point(775, 89);
+            this.pbArticulo.Location = new System.Drawing.Point(766, 83);
             this.pbArticulo.Name = "pbArticulo";
-            this.pbArticulo.Size = new System.Drawing.Size(278, 290);
+            this.pbArticulo.Size = new System.Drawing.Size(284, 297);
             this.pbArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbArticulo.TabIndex = 26;
             this.pbArticulo.TabStop = false;
@@ -160,7 +160,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1062, 450);
             this.Controls.Add(this.pbArticulo);
             this.Controls.Add(this.bDetalle);

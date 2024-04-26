@@ -120,7 +120,43 @@ namespace Funcionalidades
 
                 
             }
+
+
             
+
+
+        }
+        public void Modificar(Articulo nuevoarticulo)
+        {
+            Conexion_Comandos Accesodatos = new Conexion_Comandos();
+            try
+            {
+
+                Accesodatos.setearConsulta("Update ARTICULOS set Codigo = @Codigo,Nombre=@Nombre,Descripcion=@Descripcion,IdMarca=@IdMarca,IdCategoria=@IdCategoria,Precio=@Precio where Id = @Id");
+                Accesodatos.setearParametros("@Id", nuevoarticulo.id);
+                Accesodatos.setearParametros("@Codigo", nuevoarticulo.Codigo);
+                Accesodatos.setearParametros("@Nombre", nuevoarticulo.Nombre);
+                Accesodatos.setearParametros("@Descripcion", nuevoarticulo.descripcion);
+                Accesodatos.setearParametros("@IdMarca", nuevoarticulo.idMarca.Id);
+                Accesodatos.setearParametros("@IdCategoria", nuevoarticulo.idCategoria.Id);
+                Accesodatos.setearParametros("@Precio", nuevoarticulo.Precio);
+                Accesodatos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Accesodatos.cerrarConexion();
+
+
+            }
+
+
+
 
 
         }

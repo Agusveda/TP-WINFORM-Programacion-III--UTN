@@ -36,6 +36,28 @@ namespace Funcionalidades
 				AccesoDatos.cerrarConexion();
 			}
 
+            }
+        public void Modificar(Imagenes nuevaImagen)
+        {
+            Conexion_Comandos AccesoDatos = new Conexion_Comandos();
+
+            try
+            {
+                AccesoDatos.setearConsulta("update IMAGENES set ImagenUrl = @ImagenUrl where IdArticulo = @IdArticulo");
+                AccesoDatos.setearParametros("@IdArticulo", nuevaImagen.idArticulo);
+                AccesoDatos.setearParametros("@ImagenUrl", nuevaImagen.ImagenURL);
+                AccesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                AccesoDatos.cerrarConexion();
+            }
         }
     }
 }
+
