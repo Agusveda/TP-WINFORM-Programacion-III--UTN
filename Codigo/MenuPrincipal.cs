@@ -130,7 +130,7 @@ namespace TP_WINFORM_PROGRAM3_
         }
         private void btnLimpiarFiltro_Click(object sender, EventArgs e) //boton de limpiar Filtro
         {
-            txtFiltro.Text = null;
+            txtFiltroAvanzado.Text = null;
             CargarListado();
         }
         private void btncerrar_Click(object sender, EventArgs e) // Boton de cerrar programa

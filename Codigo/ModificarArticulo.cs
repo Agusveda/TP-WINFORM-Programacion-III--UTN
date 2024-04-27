@@ -63,7 +63,44 @@ namespace TP_WINFORM_PROGRAM3_
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            RepositorioArticulo repoart = new RepositorioArticulo();
+            int contNull = 0;
+            if (txtCodigo.Text == "") // pinto de rojo los campos que no esten completos
+            {
+                txtCodigo.BackColor = Color.Salmon;
+                contNull = 0;
+
+            }
+            else
+            {
+                txtCodigo.BackColor = System.Drawing.SystemColors.Control;
+                contNull++;
+            }
+            if (txtNombre.Text == "")
+            {
+                txtNombre.BackColor = Color.Salmon;
+                contNull = 0;
+
+            }
+            else
+            {
+                txtNombre.BackColor = System.Drawing.SystemColors.Control;
+                contNull++;
+            }
+            if (txtPrecio.Text == "")
+            {
+                txtPrecio.BackColor = Color.Salmon;
+                contNull = 0;
+
+            }
+            else
+            {
+                txtPrecio.BackColor = System.Drawing.SystemColors.Control;
+                contNull++;
+            }
+
+            if (contNull == 3)
+            {
+                RepositorioArticulo repoart = new RepositorioArticulo();
             RepositorioImagen repoImg = new RepositorioImagen();
             try
             {
@@ -91,6 +128,11 @@ namespace TP_WINFORM_PROGRAM3_
             }
 
             finally { Close(); }
+            }
+            else
+            {
+                MessageBox.Show("Campos vacios, porfavor ingresar los campos obligatorios (marcados en rojo) para poder guardar..");
+            }
         }
 
         private void ModificarArticulo_Load(object sender, EventArgs e)
@@ -132,6 +174,14 @@ namespace TP_WINFORM_PROGRAM3_
         private void txtUrlImagen_TextChanged(object sender, EventArgs e)
         {
             cargarImagen(txtUrlImagen.Text);
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
    }

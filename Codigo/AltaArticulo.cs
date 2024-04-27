@@ -78,35 +78,78 @@ namespace TP_WINFORM_PROGRAM3_
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            RepositorioArticulo repoart = new RepositorioArticulo();
-            RepositorioImagen repoImg = new RepositorioImagen();    
-           try 
+            int contNull = 0;
+            if (txtCodigo.Text == "") // pinto de rojo los campos que no esten completos
             {
-                Articulo auxArt = new Articulo();
-                auxArt.Codigo = txtCodigo.Text;
-                auxArt.Nombre = txtNombre.Text;
-                auxArt.descripcion = txtDescripcion.Text;
-                auxArt.idCategoria= (Categoria)cboCategoria.SelectedItem;
-                auxArt.idMarca = (Marca)CboMarca.SelectedItem;
-                auxArt.Precio = decimal.Parse(txtPrecio.Text);
-                repoart.Agregar(auxArt);
-                            
-                
-                Imagenes auxImg = new Imagenes();
-                
-                auxImg.idArticulo = BuscarID(auxArt.Codigo);
-                auxImg.ImagenURL = txtUrlImagen.Text;
-                repoImg.Agregar(auxImg);
-                
-                MessageBox.Show("agregado exitosamente...");
-            } 
-            catch (Exception ex)
+                txtCodigo.BackColor = Color.Salmon;
+                contNull = 0;
+
+            }
+            else
             {
-                MessageBox.Show(ex.ToString());
+                txtCodigo.BackColor = System.Drawing.SystemColors.Control;
+                contNull++;
+            }
+            if (txtNombre.Text == "")
+            {
+                txtNombre.BackColor = Color.Salmon;
+                contNull = 0;
+
+            }
+            else
+            {
+                txtNombre.BackColor = System.Drawing.SystemColors.Control;
+                contNull++;
+            }
+            if (txtPrecio.Text == "")
+            {
+                txtPrecio.BackColor = Color.Salmon;
+                contNull = 0;
+
+            }
+            else
+            {
+                txtPrecio.BackColor = System.Drawing.SystemColors.Control;
+                contNull++;
             }
 
-            finally { Close(); }
-        }
+            if (contNull == 3)
+            {
+                RepositorioArticulo repoart = new RepositorioArticulo();
+                RepositorioImagen repoImg = new RepositorioImagen();
+                try
+                {
+                    Articulo auxArt = new Articulo();
+                    auxArt.Codigo = txtCodigo.Text;
+                    auxArt.Nombre = txtNombre.Text;
+                    auxArt.descripcion = txtDescripcion.Text;
+                    auxArt.idCategoria = (Categoria)cboCategoria.SelectedItem;
+                    auxArt.idMarca = (Marca)CboMarca.SelectedItem;
+                    auxArt.Precio = decimal.Parse(txtPrecio.Text);
+                    repoart.Agregar(auxArt);
+
+
+                    Imagenes auxImg = new Imagenes();
+
+                    auxImg.idArticulo = BuscarID(auxArt.Codigo);
+                    auxImg.ImagenURL = txtUrlImagen.Text;
+                    repoImg.Agregar(auxImg);
+
+                    MessageBox.Show("agregado exitosamente...");
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+                finally { Close(); }
+            }
+            else
+            {
+                MessageBox.Show("Campos vacios, porfavor ingresar los campos obligatorios (marcados en rojo) para poder guardar..");
+            }
+            }
 
         public int BuscarID(string codigo)
         {
@@ -128,6 +171,16 @@ namespace TP_WINFORM_PROGRAM3_
             cargarImagen(txtUrlImagen.Text);
 
         }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+        }
+
+
 
         //private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
         //{}

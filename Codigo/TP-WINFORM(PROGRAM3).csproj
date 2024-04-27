@@ -120,5 +120,8 @@
       <Name>Funcionalidades</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\klipartz.com.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
