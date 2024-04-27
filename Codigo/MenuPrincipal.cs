@@ -26,13 +26,13 @@ namespace TP_WINFORM_PROGRAM3_
         //
         // botones 
         //
-        private void bAgregar_Click(object sender, EventArgs e) // boton de Alta..
+        private void btnAgregar_Click(object sender, EventArgs e) // boton de Alta..
         {
             frmAltaArticulo altaArticulo = new frmAltaArticulo();
             altaArticulo.ShowDialog();
             CargarListado();
         }
-        private void bDetalle_Click(object sender, EventArgs e) // Boton de Ver detalle..
+        private void btnDetalle_Click(object sender, EventArgs e) // Boton de Ver detalle..
         {
             try
             {
@@ -180,12 +180,12 @@ namespace TP_WINFORM_PROGRAM3_
             if (cbCampo.SelectedIndex == -1)
             {
 
-                MessageBox.Show("Por favor, seleccione el campo para fitlrar... ");
+                MessageBox.Show("Por favor, Seleccione el campo para filtrar... ");
                 return true;
             }
             if (cbCriterio.SelectedIndex == -1)
             {
-                MessageBox.Show("Por favor, seleccione el criterio para fitlrar... ");
+                MessageBox.Show("Por favor, Seleccione el criterio para filtrar... ");
                 return true;
             }
             if (cbCampo.SelectedItem.ToString() == "Precio.")
@@ -193,10 +193,15 @@ namespace TP_WINFORM_PROGRAM3_
                 if (!(soloNumeros(txtFiltroAvanzado.Text)))
                 {
 
-                    MessageBox.Show("Solo numeros para filtrar en un campo numerico");
+                    MessageBox.Show("Solo numeros para filtrar en un campo numerico...");
                     return true;
                 }
 
+            }
+            if (string.IsNullOrEmpty(txtFiltroAvanzado.Text))
+            {
+                MessageBox.Show("Por favor, Escriba la palabra a filtrar... ");
+                return true;
             }
 
             return false;
@@ -306,7 +311,7 @@ namespace TP_WINFORM_PROGRAM3_
                 {
                     Articulo seleccion = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
                     MessageBoxButtons botones = MessageBoxButtons.YesNo;
-                    DialogResult resultado = MessageBox.Show("¿Está seguro que desea borrar el articulo?", "Borrar", botones);
+                    DialogResult resultado = MessageBox.Show("La Baja Fisica borrará el articulo de la base de datos permanentemente. ¿Está seguro que desea borrar el articulo?", "Borrar", botones);
                     if (resultado == DialogResult.Yes)
                     {
                         repoArt.BajaFisica(seleccion);
@@ -325,6 +330,11 @@ namespace TP_WINFORM_PROGRAM3_
             {
                 CargarListado();
             }
+        }
+
+        private void cbCriterio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

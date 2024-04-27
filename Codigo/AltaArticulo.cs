@@ -21,6 +21,7 @@ namespace TP_WINFORM_PROGRAM3_
         public frmAltaArticulo()
         {
             InitializeComponent();
+            
         }
 
         
@@ -135,7 +136,7 @@ namespace TP_WINFORM_PROGRAM3_
                     auxImg.ImagenURL = txtUrlImagen.Text;
                     repoImg.Agregar(auxImg);
 
-                    MessageBox.Show("agregado exitosamente...");
+                    MessageBox.Show("Agregado exitosamente...");
                 }
 
                 catch (Exception ex)
@@ -182,8 +183,6 @@ namespace TP_WINFORM_PROGRAM3_
 
 
 
-        //private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
-        //{}
-        //Ctrl+K+C
+        
     }
 }

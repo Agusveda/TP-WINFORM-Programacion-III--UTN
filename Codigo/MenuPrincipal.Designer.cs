@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.dgvarticulos = new System.Windows.Forms.DataGridView();
-            this.bAgregar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.btnLimpiarFiltro = new System.Windows.Forms.Button();
             this.lbBusqueda = new System.Windows.Forms.Label();
-            this.bDetalle = new System.Windows.Forms.Button();
+            this.btnDetalle = new System.Windows.Forms.Button();
             this.pbArticulo = new System.Windows.Forms.PictureBox();
             this.btcerrar = new System.Windows.Forms.Button();
             this.lbCampo = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@
             this.txtFiltroAvanzado = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnBajaFisica = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,9 @@
             this.dgvarticulos.AllowUserToDeleteRows = false;
             this.dgvarticulos.AllowUserToResizeColumns = false;
             this.dgvarticulos.AllowUserToResizeRows = false;
+            this.dgvarticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvarticulos.BackgroundColor = System.Drawing.Color.PowderBlue;
+            this.dgvarticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvarticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvarticulos.Location = new System.Drawing.Point(13, 50);
@@ -71,28 +74,28 @@
             this.dgvarticulos.TabIndex = 22;
             this.dgvarticulos.SelectionChanged += new System.EventHandler(this.dgvarticulos_SelectionChanged);
             // 
-            // bAgregar
+            // btnAgregar
             // 
-            this.bAgregar.BackColor = System.Drawing.Color.PaleGreen;
-            this.bAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.bAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bAgregar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAgregar.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.bAgregar.Location = new System.Drawing.Point(13, 424);
-            this.bAgregar.Margin = new System.Windows.Forms.Padding(4);
-            this.bAgregar.Name = "bAgregar";
-            this.bAgregar.Size = new System.Drawing.Size(176, 40);
-            this.bAgregar.TabIndex = 11;
-            this.bAgregar.Text = "Agregar";
-            this.bAgregar.UseVisualStyleBackColor = false;
-            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
+            this.btnAgregar.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnAgregar.Location = new System.Drawing.Point(13, 424);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(176, 40);
+            this.btnAgregar.TabIndex = 11;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.PaleGreen;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(210, 424);
+            this.btnModificar.Location = new System.Drawing.Point(197, 424);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(165, 40);
@@ -108,10 +111,10 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBorrar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.Color.Black;
-            this.btnBorrar.Location = new System.Drawing.Point(465, 425);
+            this.btnBorrar.Location = new System.Drawing.Point(699, 424);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(153, 39);
+            this.btnBorrar.Size = new System.Drawing.Size(153, 40);
             this.btnBorrar.TabIndex = 13;
             this.btnBorrar.Text = "Baja Logica";
             this.btnBorrar.UseVisualStyleBackColor = false;
@@ -121,7 +124,7 @@
             // 
             this.txtFiltro.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtFiltro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFiltro.Location = new System.Drawing.Point(112, 14);
+            this.txtFiltro.Location = new System.Drawing.Point(110, 16);
             this.txtFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(140, 20);
@@ -132,11 +135,11 @@
             // 
             this.btnLimpiarFiltro.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLimpiarFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLimpiarFiltro.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarFiltro.Location = new System.Drawing.Point(646, 491);
+            this.btnLimpiarFiltro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarFiltro.Location = new System.Drawing.Point(616, 486);
             this.btnLimpiarFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiarFiltro.Name = "btnLimpiarFiltro";
-            this.btnLimpiarFiltro.Size = new System.Drawing.Size(55, 26);
+            this.btnLimpiarFiltro.Size = new System.Drawing.Size(69, 24);
             this.btnLimpiarFiltro.TabIndex = 18;
             this.btnLimpiarFiltro.Text = "Limpiar";
             this.btnLimpiarFiltro.UseVisualStyleBackColor = false;
@@ -145,26 +148,26 @@
             // lbBusqueda
             // 
             this.lbBusqueda.AutoSize = true;
-            this.lbBusqueda.Location = new System.Drawing.Point(10, 16);
+            this.lbBusqueda.Location = new System.Drawing.Point(13, 18);
             this.lbBusqueda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbBusqueda.Name = "lbBusqueda";
             this.lbBusqueda.Size = new System.Drawing.Size(83, 13);
             this.lbBusqueda.TabIndex = 20;
             this.lbBusqueda.Text = "Filtro Rapido:";
             // 
-            // bDetalle
+            // btnDetalle
             // 
-            this.bDetalle.BackColor = System.Drawing.Color.PaleGreen;
-            this.bDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bDetalle.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bDetalle.Location = new System.Drawing.Point(393, 423);
-            this.bDetalle.Margin = new System.Windows.Forms.Padding(4);
-            this.bDetalle.Name = "bDetalle";
-            this.bDetalle.Size = new System.Drawing.Size(52, 41);
-            this.bDetalle.TabIndex = 25;
-            this.bDetalle.Text = "Ver detalle";
-            this.bDetalle.UseVisualStyleBackColor = false;
-            this.bDetalle.Click += new System.EventHandler(this.bDetalle_Click);
+            this.btnDetalle.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDetalle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetalle.Location = new System.Drawing.Point(390, 424);
+            this.btnDetalle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDetalle.Name = "btnDetalle";
+            this.btnDetalle.Size = new System.Drawing.Size(146, 40);
+            this.btnDetalle.TabIndex = 25;
+            this.btnDetalle.Text = "Ver detalle";
+            this.btnDetalle.UseVisualStyleBackColor = false;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // pbArticulo
             // 
@@ -186,7 +189,7 @@
             this.btcerrar.Location = new System.Drawing.Point(1142, 426);
             this.btcerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btcerrar.Name = "btcerrar";
-            this.btcerrar.Size = new System.Drawing.Size(121, 38);
+            this.btcerrar.Size = new System.Drawing.Size(121, 40);
             this.btcerrar.TabIndex = 27;
             this.btcerrar.Text = "&Cerrar";
             this.btcerrar.UseVisualStyleBackColor = false;
@@ -196,7 +199,7 @@
             // 
             this.lbCampo.AutoSize = true;
             this.lbCampo.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCampo.Location = new System.Drawing.Point(20, 492);
+            this.lbCampo.Location = new System.Drawing.Point(10, 490);
             this.lbCampo.Name = "lbCampo";
             this.lbCampo.Size = new System.Drawing.Size(73, 17);
             this.lbCampo.TabIndex = 28;
@@ -204,26 +207,29 @@
             // 
             // cbCampo
             // 
+            this.cbCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCampo.FormattingEnabled = true;
-            this.cbCampo.Location = new System.Drawing.Point(97, 493);
+            this.cbCampo.Location = new System.Drawing.Point(78, 490);
             this.cbCampo.Name = "cbCampo";
-            this.cbCampo.Size = new System.Drawing.Size(106, 20);
+            this.cbCampo.Size = new System.Drawing.Size(97, 20);
             this.cbCampo.TabIndex = 29;
             this.cbCampo.SelectedIndexChanged += new System.EventHandler(this.cbcampo_SelectedIndexChanged);
             // 
             // cbCriterio
             // 
+            this.cbCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCriterio.FormattingEnabled = true;
-            this.cbCriterio.Location = new System.Drawing.Point(307, 495);
+            this.cbCriterio.Location = new System.Drawing.Point(276, 490);
             this.cbCriterio.Name = "cbCriterio";
-            this.cbCriterio.Size = new System.Drawing.Size(106, 20);
+            this.cbCriterio.Size = new System.Drawing.Size(86, 20);
             this.cbCriterio.TabIndex = 31;
+            this.cbCriterio.SelectedIndexChanged += new System.EventHandler(this.cbCriterio_SelectedIndexChanged);
             // 
             // lbCriterio
             // 
             this.lbCriterio.AutoSize = true;
             this.lbCriterio.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCriterio.Location = new System.Drawing.Point(221, 493);
+            this.lbCriterio.Location = new System.Drawing.Point(195, 490);
             this.lbCriterio.Name = "lbCriterio";
             this.lbCriterio.Size = new System.Drawing.Size(75, 17);
             this.lbCriterio.TabIndex = 30;
@@ -233,7 +239,7 @@
             // 
             this.lbFiltro.AutoSize = true;
             this.lbFiltro.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFiltro.Location = new System.Drawing.Point(419, 494);
+            this.lbFiltro.Location = new System.Drawing.Point(387, 489);
             this.lbFiltro.Name = "lbFiltro";
             this.lbFiltro.Size = new System.Drawing.Size(64, 17);
             this.lbFiltro.TabIndex = 32;
@@ -243,7 +249,7 @@
             // 
             this.txtFiltroAvanzado.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtFiltroAvanzado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFiltroAvanzado.Location = new System.Drawing.Point(481, 495);
+            this.txtFiltroAvanzado.Location = new System.Drawing.Point(448, 488);
             this.txtFiltroAvanzado.Margin = new System.Windows.Forms.Padding(4);
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
             this.txtFiltroAvanzado.Size = new System.Drawing.Size(106, 20);
@@ -251,12 +257,12 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackgroundImage = global::TP_WINFORM_PROGRAM3_.Properties.Resources.klipartz_com;
+            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBuscar.Image = global::TP_WINFORM_PROGRAM3_.Properties.Resources.klipartz_com;
-            this.btnBuscar.Location = new System.Drawing.Point(607, 490);
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(561, 486);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(32, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(48, 24);
             this.btnBuscar.TabIndex = 34;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -266,16 +272,26 @@
             this.btnBajaFisica.BackColor = System.Drawing.Color.Firebrick;
             this.btnBajaFisica.Cursor = System.Windows.Forms.Cursors.No;
             this.btnBajaFisica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBajaFisica.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBajaFisica.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBajaFisica.ForeColor = System.Drawing.Color.Black;
-            this.btnBajaFisica.Location = new System.Drawing.Point(699, 425);
+            this.btnBajaFisica.Location = new System.Drawing.Point(743, 16);
             this.btnBajaFisica.Margin = new System.Windows.Forms.Padding(4);
             this.btnBajaFisica.Name = "btnBajaFisica";
-            this.btnBajaFisica.Size = new System.Drawing.Size(153, 39);
+            this.btnBajaFisica.Size = new System.Drawing.Size(109, 24);
             this.btnBajaFisica.TabIndex = 35;
-            this.btnBajaFisica.Text = "BajaFisica";
+            this.btnBajaFisica.Text = "Baja Fisica";
             this.btnBajaFisica.UseVisualStyleBackColor = false;
             this.btnBajaFisica.Click += new System.EventHandler(this.btnBajaFisica_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(258, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "(Nombre / Categoria)";
             // 
             // MenuPrincipal
             // 
@@ -284,6 +300,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(1279, 522);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBajaFisica);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtFiltroAvanzado);
@@ -294,14 +311,14 @@
             this.Controls.Add(this.lbCampo);
             this.Controls.Add(this.btcerrar);
             this.Controls.Add(this.pbArticulo);
-            this.Controls.Add(this.bDetalle);
+            this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.dgvarticulos);
             this.Controls.Add(this.lbBusqueda);
             this.Controls.Add(this.btnLimpiarFiltro);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.bAgregar);
+            this.Controls.Add(this.btnAgregar);
             this.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -320,13 +337,13 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dgvarticulos;
-        private System.Windows.Forms.Button bAgregar;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Button btnLimpiarFiltro;
         private System.Windows.Forms.Label lbBusqueda;
-        private System.Windows.Forms.Button bDetalle;
+        private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.PictureBox pbArticulo;
         private System.Windows.Forms.Button btcerrar;
         private System.Windows.Forms.Label lbCampo;
@@ -337,6 +354,7 @@
         private System.Windows.Forms.TextBox txtFiltroAvanzado;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnBajaFisica;
+        private System.Windows.Forms.Label label1;
     }
 }
 
