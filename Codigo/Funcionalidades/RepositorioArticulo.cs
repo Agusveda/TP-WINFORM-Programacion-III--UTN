@@ -282,5 +282,27 @@ namespace Funcionalidades
                 throw ex;
             }
         }
+
+
+        public void BajaFisica(Articulo bajaFisica)
+        {
+            Conexion_Comandos datos = new Conexion_Comandos();
+
+            try
+            {
+                datos.setearConsulta("delete from articulos where id = @id");
+                datos.setearParametros("@id",bajaFisica.id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
+
+
 }

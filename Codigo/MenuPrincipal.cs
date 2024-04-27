@@ -125,6 +125,8 @@ namespace TP_WINFORM_PROGRAM3_
             }
 
             
+
+
         }
         private void btnLimpiarFiltro_Click(object sender, EventArgs e) //boton de limpiar Filtro
         {
@@ -293,6 +295,36 @@ namespace TP_WINFORM_PROGRAM3_
                 }
 
             
+        }
+
+        private void btnBajaFisica_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RepositorioArticulo repoArt = new RepositorioArticulo();
+                if (dgvarticulos.CurrentRow != null)
+                {
+                    Articulo seleccion = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+                    MessageBoxButtons botones = MessageBoxButtons.YesNo;
+                    DialogResult resultado = MessageBox.Show("¿Está seguro que desea borrar el articulo?", "Borrar", botones);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        repoArt.BajaFisica(seleccion);
+                        MessageBox.Show("Borrado exitosamente...");
+                    }
+                }
+
+            }
+
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al borrar");
+            }
+            finally
+            {
+                CargarListado();
+            }
         }
     }
 }

@@ -89,3 +89,4 @@ C:\Users\HerreraA\Documents\GitHub\TP-WINFORM-Programacion-III--UTN\Codigo\obj\D
 C:\Users\HerreraA\Documents\GitHub\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFORM(PROGRAM3).exe
 C:\Users\HerreraA\Documents\GitHub\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP-WINFORM(PROGRAM3).pdb
 C:\Users\Usuario\Desktop\C#\Facultad\winform program3\TP-WINFORM(PROGRAM3)\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP_WINFORM_PROGRAM3_.ModificarArticulo.resources
+D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\obj\Debug\TP_WINFORM_PROGRAM3_.ModificarArticulo.resources

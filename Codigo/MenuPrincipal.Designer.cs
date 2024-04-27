@@ -46,6 +46,7 @@
             this.lbFiltro = new System.Windows.Forms.Label();
             this.txtFiltroAvanzado = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnBajaFisica = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
             this.SuspendLayout();
@@ -107,12 +108,12 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBorrar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.Color.Black;
-            this.btnBorrar.Location = new System.Drawing.Point(702, 467);
+            this.btnBorrar.Location = new System.Drawing.Point(468, 467);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(153, 53);
             this.btnBorrar.TabIndex = 13;
-            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.Text = "Baja Logica";
             this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
@@ -258,13 +259,30 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // btnBajaFisica
+            // 
+            this.btnBajaFisica.BackColor = System.Drawing.Color.Firebrick;
+            this.btnBajaFisica.Cursor = System.Windows.Forms.Cursors.No;
+            this.btnBajaFisica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBajaFisica.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBajaFisica.ForeColor = System.Drawing.Color.Black;
+            this.btnBajaFisica.Location = new System.Drawing.Point(702, 467);
+            this.btnBajaFisica.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBajaFisica.Name = "btnBajaFisica";
+            this.btnBajaFisica.Size = new System.Drawing.Size(153, 53);
+            this.btnBajaFisica.TabIndex = 35;
+            this.btnBajaFisica.Text = "BajaFisica";
+            this.btnBajaFisica.UseVisualStyleBackColor = false;
+            this.btnBajaFisica.Click += new System.EventHandler(this.btnBajaFisica_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(1416, 632);
+            this.ClientSize = new System.Drawing.Size(1364, 632);
+            this.Controls.Add(this.btnBajaFisica);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtFiltroAvanzado);
             this.Controls.Add(this.lbFiltro);
@@ -316,6 +334,7 @@
         private System.Windows.Forms.Label lbFiltro;
         private System.Windows.Forms.TextBox txtFiltroAvanzado;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnBajaFisica;
     }
 }
 
