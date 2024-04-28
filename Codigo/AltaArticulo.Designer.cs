@@ -234,6 +234,8 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lbNombre);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(614, 409);
+            this.MinimumSize = new System.Drawing.Size(614, 409);
             this.Name = "frmAltaArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta De Articulo";
