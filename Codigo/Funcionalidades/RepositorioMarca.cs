@@ -18,7 +18,7 @@ namespace Funcionalidades
             Conexion_Comandos AccesoDatos = new Conexion_Comandos();
             try
 			{
-                AccesoDatos.setearConsulta("select * from MARCAS");
+                AccesoDatos.setearConsulta("select Id, Descripcion from MARCAS");
                 AccesoDatos.ejecutarLectura();
                 while (AccesoDatos.Lector.Read())
                 {
@@ -39,6 +39,31 @@ namespace Funcionalidades
 			}
             finally { AccesoDatos.cerrarConexion(); }
             
+        }
+
+        public void Agregar(Marca nuevaMarca)
+        {
+            Conexion_Comandos Accesodatos = new Conexion_Comandos();
+            try
+            {
+
+                Accesodatos.setearConsulta("insert into MARCAS(Descripcion) values (@descripcion)");
+
+                Accesodatos.setearParametros("@Descripcion", nuevaMarca.Descripcion);
+
+                Accesodatos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Accesodatos.cerrarConexion();
+
+            }
         }
     }
 }

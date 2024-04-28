@@ -19,7 +19,7 @@ namespace Funcionalidades
             Conexion_Comandos AccesoDatos = new Conexion_Comandos();
             try
             {
-                AccesoDatos.setearConsulta("select * from CATEGORIAS");
+                AccesoDatos.setearConsulta("select Id, Descripcion from CATEGORIAS");
                 AccesoDatos.ejecutarLectura();
                 while (AccesoDatos.Lector.Read())
                 {
@@ -40,6 +40,31 @@ namespace Funcionalidades
             }
             finally { AccesoDatos.cerrarConexion(); }
 
+        }
+
+        public void Agregar(Categoria nuevaCat)
+        {
+            Conexion_Comandos Accesodatos = new Conexion_Comandos();
+            try
+            {
+
+                Accesodatos.setearConsulta("insert into CATEGORIAS(Descripcion) values (@descripcion)");
+               
+                Accesodatos.setearParametros("@Descripcion", nuevaCat.Descripcion);
+              
+                Accesodatos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Accesodatos.cerrarConexion();
+
+            }
         }
     }
 }

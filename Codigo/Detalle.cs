@@ -51,6 +51,9 @@ namespace TP_WINFORM_PROGRAM3_
             Close();
         }
 
-        
+        private void Detalle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

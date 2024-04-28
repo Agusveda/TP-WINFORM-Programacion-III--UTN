@@ -48,6 +48,8 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnBajaFisica = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAgregarCat = new System.Windows.Forms.Button();
+            this.btnAgregarMarca = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
             this.SuspendLayout();
@@ -293,6 +295,38 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "(Codigo/ Categoria)";
             // 
+            // btnAgregarCat
+            // 
+            this.btnAgregarCat.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnAgregarCat.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnAgregarCat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarCat.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCat.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnAgregarCat.Location = new System.Drawing.Point(561, 24);
+            this.btnAgregarCat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarCat.Name = "btnAgregarCat";
+            this.btnAgregarCat.Size = new System.Drawing.Size(73, 18);
+            this.btnAgregarCat.TabIndex = 37;
+            this.btnAgregarCat.Text = "Agregar cat";
+            this.btnAgregarCat.UseVisualStyleBackColor = false;
+            this.btnAgregarCat.Click += new System.EventHandler(this.btnAgregarCat_Click);
+            // 
+            // btnAgregarMarca
+            // 
+            this.btnAgregarMarca.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnAgregarMarca.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarMarca.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarMarca.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnAgregarMarca.Location = new System.Drawing.Point(473, 24);
+            this.btnAgregarMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarMarca.Name = "btnAgregarMarca";
+            this.btnAgregarMarca.Size = new System.Drawing.Size(80, 18);
+            this.btnAgregarMarca.TabIndex = 38;
+            this.btnAgregarMarca.Text = "Agregar Marca";
+            this.btnAgregarMarca.UseVisualStyleBackColor = false;
+            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -300,6 +334,8 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(1279, 522);
+            this.Controls.Add(this.btnAgregarMarca);
+            this.Controls.Add(this.btnAgregarCat);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBajaFisica);
             this.Controls.Add(this.btnBuscar);
@@ -357,6 +393,8 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnBajaFisica;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAgregarCat;
+        private System.Windows.Forms.Button btnAgregarMarca;
     }
 }
 

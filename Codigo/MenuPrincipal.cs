@@ -336,5 +336,19 @@ namespace TP_WINFORM_PROGRAM3_
         {
 
         }
+
+        private void btnAgregarCat_Click(object sender, EventArgs e)
+        {
+            AltaMarca_Categoria AltaCate = new AltaMarca_Categoria(false);
+            AltaCate.ShowDialog();
+            CargarListado();
+        }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            AltaMarca_Categoria AltaCate = new AltaMarca_Categoria();
+            AltaCate.ShowDialog();
+            CargarListado();
+        }
     }
 }
