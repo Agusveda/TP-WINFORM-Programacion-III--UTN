@@ -289,9 +289,9 @@
             this.label1.Location = new System.Drawing.Point(258, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 13);
+            this.label1.Size = new System.Drawing.Size(122, 13);
             this.label1.TabIndex = 36;
-            this.label1.Text = "(Nombre / Categoria)";
+            this.label1.Text = "(Codigo/ Categoria)";
             // 
             // MenuPrincipal
             // 
