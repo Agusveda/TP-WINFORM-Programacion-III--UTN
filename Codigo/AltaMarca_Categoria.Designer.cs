@@ -38,6 +38,8 @@
             this.cbMarca = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnBajaFisica = new System.Windows.Forms.Button();
+            this.btnBajaFisicaMarca = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCat
@@ -122,9 +124,9 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAgregar.Location = new System.Drawing.Point(97, 221);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(120, 23);
             this.btnAgregar.TabIndex = 8;
-            this.btnAgregar.Text = "Aceptar";
+            this.btnAgregar.Text = "Aceptar Alta";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -136,20 +138,54 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Red;
-            this.btnCancelar.Location = new System.Drawing.Point(405, 221);
+            this.btnCancelar.Location = new System.Drawing.Point(358, 221);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Text = "Cerrar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnBajaFisica
+            // 
+            this.btnBajaFisica.BackColor = System.Drawing.Color.White;
+            this.btnBajaFisica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBajaFisica.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnBajaFisica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBajaFisica.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBajaFisica.ForeColor = System.Drawing.Color.Red;
+            this.btnBajaFisica.Location = new System.Drawing.Point(465, 101);
+            this.btnBajaFisica.Name = "btnBajaFisica";
+            this.btnBajaFisica.Size = new System.Drawing.Size(127, 23);
+            this.btnBajaFisica.TabIndex = 10;
+            this.btnBajaFisica.Text = "Baja fisica";
+            this.btnBajaFisica.UseVisualStyleBackColor = false;
+            this.btnBajaFisica.Click += new System.EventHandler(this.btnBajaFisica_Click);
+            // 
+            // btnBajaFisicaMarca
+            // 
+            this.btnBajaFisicaMarca.BackColor = System.Drawing.Color.White;
+            this.btnBajaFisicaMarca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBajaFisicaMarca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnBajaFisicaMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBajaFisicaMarca.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBajaFisicaMarca.ForeColor = System.Drawing.Color.Red;
+            this.btnBajaFisicaMarca.Location = new System.Drawing.Point(465, 151);
+            this.btnBajaFisicaMarca.Name = "btnBajaFisicaMarca";
+            this.btnBajaFisicaMarca.Size = new System.Drawing.Size(127, 23);
+            this.btnBajaFisicaMarca.TabIndex = 11;
+            this.btnBajaFisicaMarca.Text = "Baja fisica";
+            this.btnBajaFisicaMarca.UseVisualStyleBackColor = false;
+            this.btnBajaFisicaMarca.Click += new System.EventHandler(this.btnBajaFisicaMarca_Click);
             // 
             // AltaMarca_Categoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(529, 271);
+            this.ClientSize = new System.Drawing.Size(615, 271);
+            this.Controls.Add(this.btnBajaFisicaMarca);
+            this.Controls.Add(this.btnBajaFisica);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.cbMarca);
@@ -160,7 +196,10 @@
             this.Controls.Add(this.txtCat);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCat);
+            this.MaximumSize = new System.Drawing.Size(631, 310);
+            this.MinimumSize = new System.Drawing.Size(631, 310);
             this.Name = "AltaMarca_Categoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaMarca_Categoria";
             this.Load += new System.EventHandler(this.AltaMarca_Categoria_Load);
             this.ResumeLayout(false);
@@ -180,5 +219,7 @@
         private System.Windows.Forms.ComboBox cbMarca;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnBajaFisica;
+        private System.Windows.Forms.Button btnBajaFisicaMarca;
     }
 }

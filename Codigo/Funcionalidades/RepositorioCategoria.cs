@@ -66,6 +66,23 @@ namespace Funcionalidades
 
             }
         }
+
+        public void BajaFisica(Categoria cate)
+        {
+            Conexion_Comandos datos = new Conexion_Comandos();
+
+            try
+            {
+                datos.setearConsulta("delete from Categorias where id = @id");
+                datos.setearParametros("@id", cate.Id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
 

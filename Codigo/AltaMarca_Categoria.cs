@@ -19,13 +19,16 @@ namespace TP_WINFORM_PROGRAM3_
         {
             InitializeComponent();
             txtCat.ReadOnly = true;
+            cbCat.Visible = false;
+            btnBajaFisica.Visible = false;
         }
         public AltaMarca_Categoria(bool parametro) //cuando sea categoria
         {
             InitializeComponent();
             this.parametro = parametro;
             txtMarca.ReadOnly = true;
-
+            cbMarca.Visible = false;
+            btnBajaFisicaMarca.Visible=false;
 
         }
 
@@ -122,6 +125,65 @@ namespace TP_WINFORM_PROGRAM3_
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnBajaFisica_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RepositorioCategoria repocat= new RepositorioCategoria();
+                
+                    Categoria seleccion = (Categoria)cbCat.SelectedItem;
+                    MessageBoxButtons botones = MessageBoxButtons.YesNo;
+                    DialogResult resultado = MessageBox.Show("La Baja Fisica borrará el articulo de la base de datos permanentemente. ¿Está seguro que desea borrar el articulo?", "Borrar", botones);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        repocat.BajaFisica(seleccion);
+                        MessageBox.Show("Borrado exitosamente...");
+                    }
+                
+
+            }
+
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al borrar");
+            }
+            finally
+            {
+                Close();
+            }
+        }
+
+        private void btnBajaFisicaMarca_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RepositorioMarca repomar = new RepositorioMarca();
+
+                Marca seleccion = (Marca)cbMarca.SelectedItem;
+                MessageBoxButtons botones = MessageBoxButtons.YesNo;
+                DialogResult resultado = MessageBox.Show("La Baja Fisica borrará el articulo de la base de datos permanentemente. ¿Está seguro que desea borrar el articulo?", "Borrar", botones);
+                if (resultado == DialogResult.Yes)
+                {
+                    repomar.BajaFisica(seleccion);
+                    MessageBox.Show("Borrado exitosamente...");
+                }
+
+
+            }
+
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al borrar");
+            }
+            finally
+            {
+                Close();
+            }
+
         }
     }
 }

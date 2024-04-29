@@ -305,9 +305,9 @@
             this.btnAgregarCat.Location = new System.Drawing.Point(561, 24);
             this.btnAgregarCat.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarCat.Name = "btnAgregarCat";
-            this.btnAgregarCat.Size = new System.Drawing.Size(73, 18);
+            this.btnAgregarCat.Size = new System.Drawing.Size(81, 18);
             this.btnAgregarCat.TabIndex = 37;
-            this.btnAgregarCat.Text = "Agregar cat";
+            this.btnAgregarCat.Text = "abm categoria";
             this.btnAgregarCat.UseVisualStyleBackColor = false;
             this.btnAgregarCat.Click += new System.EventHandler(this.btnAgregarCat_Click);
             // 
@@ -323,7 +323,7 @@
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(80, 18);
             this.btnAgregarMarca.TabIndex = 38;
-            this.btnAgregarMarca.Text = "Agregar Marca";
+            this.btnAgregarMarca.Text = "abm Marca";
             this.btnAgregarMarca.UseVisualStyleBackColor = false;
             this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
             // 

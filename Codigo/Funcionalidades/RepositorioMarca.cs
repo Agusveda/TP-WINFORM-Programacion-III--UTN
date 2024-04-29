@@ -65,5 +65,22 @@ namespace Funcionalidades
 
             }
         }
+
+        public void BajaFisica(Marca marca)
+        {
+            Conexion_Comandos datos = new Conexion_Comandos();
+
+            try
+            {
+                datos.setearConsulta("delete from MARCAS where id = @id");
+                datos.setearParametros("@id", marca.Id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
