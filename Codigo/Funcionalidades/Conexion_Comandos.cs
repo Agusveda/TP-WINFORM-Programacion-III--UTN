@@ -19,11 +19,22 @@ namespace Funcionalidades
             get { return lector; }
         }
 
+
+
+
+
+
+
+
         public Conexion_Comandos()
         {
          conexion = new SqlConnection("server= FACU; database=CATALOGO_P3_DB; Integrated Security = True");
 
-
+            /// AALKSJDKLÑASJD KLÑASJDAKLS AGU ESTUVI
+            /// // ASD/A
+            /// ASDASDAS
+            /// ASDAS
+            /// DAS
             comando = new SqlCommand();
         }
 
