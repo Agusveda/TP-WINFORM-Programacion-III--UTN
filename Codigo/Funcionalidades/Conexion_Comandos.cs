@@ -35,6 +35,7 @@ namespace Funcionalidades
             /// ASDASDAS
             /// ASDAS
             /// DAS
+            /// //PROBANDO CAMBIOS FACU ESTUVO AQUI
             comando = new SqlCommand();
         }
 
