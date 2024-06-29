@@ -10,3 +10,9 @@ D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\Clases\o
 D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
 D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\Clases\obj\Debug\Clases.dll
 D:\TRANSFERENCIA\CODIGO\WINFORM\TP-WINFORM-Programacion-III--UTN\Codigo\Clases\obj\Debug\Clases.pdb
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Clases\bin\Debug\Clases.dll
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Clases\bin\Debug\Clases.pdb
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Clases\obj\Debug\Clases.csproj.AssemblyReference.cache
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Clases\obj\Debug\Clases.dll
+E:\UTN\TP-WINFORM-Programacion-III--UTN\Codigo\Clases\obj\Debug\Clases.pdb
