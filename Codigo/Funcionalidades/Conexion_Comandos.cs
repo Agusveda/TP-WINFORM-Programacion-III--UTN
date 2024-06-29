@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using Clases;
 
 
 namespace Funcionalidades
@@ -20,19 +19,22 @@ namespace Funcionalidades
             get { return lector; }
         }
 
+
+
+
+
+
+
+
         public Conexion_Comandos()
         {
-<<<<<<< Updated upstream
-            //conexion = new SqlConnection("server= DESKTOP-DLD9B46; database=CATALOGO_P3_DB; Integrated Security = True");   
-            //conexion = new SqlConnection("server= FACU; database=CATALOGO_P3_DB; Integrated Security = True");
-            //conexion = new SqlConnection("server= DESKTOP-A3HCDG7\\SQLEXPRESS; database=CATALOGO_P3_DB; Integrated Security = True");
-            conexion = new SqlConnection("server= FACUHP; database=CATALOGO_P3_DB; Integrated Security = True");
-
-=======
          conexion = new SqlConnection("server= FACU; database=CATALOGO_P3_DB; Integrated Security = True");
-            //FACU ESTUVO AQUI
->>>>>>> Stashed changes
 
+            /// AALKSJDKLÑASJD KLÑASJDAKLS AGU ESTUVI
+            /// // ASD/A
+            /// ASDASDAS
+            /// ASDAS
+            /// DAS
             comando = new SqlCommand();
         }
 
@@ -62,23 +64,27 @@ namespace Funcionalidades
                 lector.Close();
             conexion.Close();
         }
+        public void setearParametros(string nombre, object valor)
+        {
 
-        public void ejecutarcomando()
+            comando.Parameters.AddWithValue(nombre, valor);
+        }
+        
+        public void ejecutarAccion()
         {
             comando.Connection = conexion;
             try
             {
+
                 conexion.Open();
                 comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
+
                 throw ex;
             }
         }
-
-       
-
 
 
 
